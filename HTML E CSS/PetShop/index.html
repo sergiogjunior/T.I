@@ -1,12 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PetShop - Seu Melhor Amigo</title>
 </head>
 <body>
-    
+    <header>
+        <h1>PetShop - Seu Melhor Amigo</h1>
+        <nav>
+            <ul>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="produtos">
+        <h2>Produtos para seu Pet</h2>
+        <p>Confira os nossos produtos para cães e gatos:</p>
+        
+        <h3>Brinquedos para Cachorro</h3>
+        <div>
+            <img src="imagens/brinquedo_cachorro_1.jpg" alt="Brinquedo de cachorro 1" width="200">
+            <img src="imagens/brinquedo_cachorro_2.jpg" alt="Brinquedo de cachorro 2" width="200">
+        </div>
+        
+        <h3>Brinquedos para Gato</h3>
+        <div>
+            <img src="imagens/brinquedo_gato_1.jpg" alt="Brinquedo de gato 1" width="200">
+            <img src="imagens/brinquedo_gato_2.jpg" alt="Brinquedo de gato 2" width="200">
+        </div>
+        
+        <h3>Ração para Cachorro</h3>
+        <div>
+            <img src="imagens/racao_cachorro.jpg" alt="Ração de cachorro" width="200">
+        </div>
+        
+        <h3>Ração para Gato</h3>
+        <div>
+            <img src="imagens/racao_gato.jpg" alt="Ração de gato" width="200">
+        </div>
+    </section>
+
+    <section id="servicos">
+        <h2>Serviços</h2>
+        <p>Oferecemos diversos serviços para cuidar do seu pet, como:</p>
+        <ul>
+            <li>Banho e Tosa</li>
+            <li>Consultas Veterinárias</li>
+            <li>Treinamento de Cães</li>
+        </ul>
+    </section>
+
+    <section id="contato">
+        <h2>Entre em Contato</h2>
+        <p>Fale conosco para mais informações ou para fazer um pedido:</p>
+        <form action="#" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 PetShop - Todos os direitos reservados</p>
+    </footer>
 </body>
 </html>
