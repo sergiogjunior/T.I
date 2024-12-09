@@ -50,7 +50,7 @@
             <br><br><br><br>
         </form>
        
-        <button> deletar </button>
+        
     </div>
     <br>
     <hr><br>
