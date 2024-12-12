@@ -3,83 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário</title>
-
+    <title>PetShop - Seu Melhor Amigo</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
-<body>
-    
-
-<h1>Formulário de Alta Veterinária</h1>
+<body class="fundo">
+    <header>
+        <h1>PetShop - Seu Melhor Amigo</h1>
+            <nav>
+                <p class="menu"><a href="#contatos">Contatos</a></p>
+                <p class="menu"><a href="loginVet.html">Login</a></p>
+            </nav>
+    </header>
 
     <main>
-        <form action="Formulario" method="post" autocomplete="on">
-            <fieldset style="width: 80%; margin: 5px auto;" class="texto">
-                <legend>Dados Pessoais</legend>
-                <div>
-                    <label for="inome">Nome:</label>
-                    <input class="borda" type="text" name="nome" id="inome" placeholder="Primeiro Nome " autocomplete="name">
-                    <input class="borda" type="text" name="nome1" id="inome1" placeholder="Segundo Nome" autocomplete="name">
-                </div>
-                <br>
-                <div>
-                    <label for="itelefone">Telefone:</label>
-                    <input class="borda" type="tel" name="telefone" id="itelefone" autocomplete="tel" pattern="^\(\d{2}\)\d{4,5}\-\d{4}$" required placeholder="(xx)x xxxx-xxxx">
-                </div>
-                <br>
-                <div>
-                    <label for="iemail">Email:</label>
-                    <input class="borda" type="email" name="email" id="iemail" placeholder="E-mail">
-                </div>
-                <br>               
-            </fieldset>
-            <br><br>
+        <h2>Produtos para seu Pet</h2>
+        <p>Confira os nossos produtos para cães e gatos:</p>
+        <br><br><br>
+        session
+        <h3>Brinquedos para Cachorro</h3>
+            <article><img src="../imagens/Pet Shop/brinquedo cachorro filhote100.png" alt="Brinquedo de cachorro 1" width="100"></article>
+                
+            <article><img src="../imagens/Pet Shop/brinquedo cachorro100.png" alt="Brinquedo de cachorro 2" width="100"></article>
+            
+        <br><br>
+        <h3>Brinquedos para Gato</h3>
+                <article><img src="../imagens/Pet Shop/brinquedo gato pena100.png" alt="Brinquedo de gato 1" width="100"></article>
 
-            <fieldset style="width: 80%; margin: 5px auto;">
-                <legend>Dados do Animal</legend>
-                <div>
-                    <label for="inomeanimal">Nome do Animal:</label>
-                    <input class="borda" type="text" name="nomeanimal" id="inomeanimal" placeholder="Nome do Animal " autocomplete="name">
-                </div>
-                <br>
-                <div>
-                    <br>
-                    <fieldset>
-                        <legend>Porte do Animal</legend>
-                            <label for="ipequeno">Pequeno</label>
-                            <input type="radio" name="pequeno" id="ipequeno" checked>
-
-                            <label for="imedio">Médio</label>
-                            <input type="radio" name="medio" id="imedio">
-
-                            <label for="igrande">Grande</label>
-                            <input type="radio" name="grande" id="igrande">
-                    </fieldset>
-                </div>
-                <br>
-                <div>
-
-                </div>
-                <br>
-            </fieldset>
-
-            <br><br>
-            <fieldset style="width: 80%; margin: 5px auto;" class="texto">
-                <legend>Dados Alta</legend>
-                <div>
-                    <label for="idata">Dia da Alta:</label>
-                    <input class="borda" type="date" name="data" id="idata"><br>
-                </div>
-                <br>
-                <div>
-                    <label for="iinstrucao">Instruções pós-tratamento:</label><br>
-                <textarea class="texto" name="instrucao" id="iinstrucao" cols="50" rows="5"></textarea>
-                </div>
-            </fieldset>
-
-        </form>
+                <article><img src="../imagens/Pet Shop/brinquedo gato rato100.png" alt="Brinquedo de gato 2" width="100"></article>
+        <br><br>
+        <h3>Ração para Cachorro</h3>
+            <div>
+                <article><img src="../imagens/Pet Shop/Racao_Para_Cachorro_2.png" alt="Ração de cachorro" width="100"></article>
+            </div>
+        <br><br>
+        <h3>Ração para Gato</h3>
+            <div>
+                <article><img src="../imagens/Pet Shop/racao gato100.png" alt="Ração de gato" width="100"></article>
+            </div>
     </main>
+        
+    <footer>
+        <h2>Serviços</h2>
+        <p>Oferecemos diversos serviços para cuidar do seu pet, como:</p>
+        <ul>
+            <li>Banho e Tosa</li>
+            <li>Consultas Veterinárias</li>
+            <li>Adestramento de Cão</li>
+            <li></li>
+        </ul>
+    </footer>
+    
+        
 </body>
-
 </html>
