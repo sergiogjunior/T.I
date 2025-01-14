@@ -3,36 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário</title>
+    <title>PetShop - Seu Melhor Amigo</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+<body class="fundo">
+    <header>
+        <h1>PetShop - Seu Melhor Amigo</h1>
+            <nav>
+                <p class="menu"><a href="#contatos">Contatos</a></p>
+                <p class="menu"><a href="loginVet.html">Login</a></p>
+            </nav>
+    </header>
 
-<body>
     <main>
-        <form action="Formulario" method="post" autocomplete="on">
-            <fieldset>
-                <legend>Dados Pessoais</legend>
-                <div>
-                    <label for="inome">Nome:</label>
-                    <input class="inputpessoais" type="text" name="Nome" id="inome" placeholder="Primeiro Nome: " autocomplete="name">
-                    <input class="inputpessoais" type="text" name="nome1" id="inome1" placeholder="Segundo Nome:" autocomplete="name">
-                </div>
+        <h2>Produtos para seu Pet</h2>
+        <p>Confira os nossos produtos para cães e gatos:</p>
+        <br><br><br>
+        session
+        <h3>Brinquedos para Cachorro</h3>
+            <article><img src="../imagens/Pet Shop/brinquedo cachorro filhote100.png" alt="Brinquedo de cachorro 1" width="100"></article>
+                
+            <article><img src="../imagens/Pet Shop/brinquedo cachorro100.png" alt="Brinquedo de cachorro 2" width="100"></article>
+            
+        <br><br>
+        <h3>Brinquedos para Gato</h3>
+                <article><img src="../imagens/Pet Shop/brinquedo gato pena100.png" alt="Brinquedo de gato 1" width="100"></article>
 
-                <div>
-                    <label for="iidade">Idade:</label>
-                    <input class="inputpessoais" type="number" name="idade" id="iidade" min="18" max="120" placeholder="19 a 120" step="1">
-                </div>
-
-                <div>
-                    <label for="itelefone">Telefone:</label>
-                    <input type="tel" name="telefone" id="itelefone" autocomplete="tel" pattern="^\(\d{2}\)\d{4,5}\-\d{4}$" required placeholder="(xx)x xxxx-xxxx">
-                </div>
-
-                <div>
-                    
-                </div>
-            </fieldset>
-        </form>
+                <article><img src="../imagens/Pet Shop/brinquedo gato rato100.png" alt="Brinquedo de gato 2" width="100"></article>
+        <br><br>
+        <h3>Ração para Cachorro</h3>
+            <div>
+                <article><img src="../imagens/Pet Shop/Racao_Para_Cachorro_2.png" alt="Ração de cachorro" width="100"></article>
+            </div>
+        <br><br>
+        <h3>Ração para Gato</h3>
+            <div>
+                <article><img src="../imagens/Pet Shop/racao gato100.png" alt="Ração de gato" width="100"></article>
+            </div>
     </main>
+        
+    <footer>
+        <h2>Serviços</h2>
+        <p>Oferecemos diversos serviços para cuidar do seu pet, como:</p>
+        <ul>
+            <li>Banho e Tosa</li>
+            <li>Consultas Veterinárias</li>
+            <li>Adestramento de Cão</li>
+            <li></li>
+        </ul>
+    </footer>
+    
+        
 </body>
-
 </html>

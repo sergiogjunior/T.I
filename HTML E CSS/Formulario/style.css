@@ -1,0 +1,75 @@
+.borda{
+border: 1px solid #A6A6A6;
+border-radius: 12px;
+padding: 5px;
+margin: auto;
+}
+
+.texto{
+border: 1px solid #A6A6A6;
+border-radius: 5px;
+padding: 5px;
+}
+
+.fundo{
+background-color: #fff7f7;
+}
+
+h1{
+    text-align: center;
+}
+
+/* Reseta as margens e o preenchimento padrão do navegador */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Define a fonte e a cor de fundo do body */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte do corpo */
+    background-color: #f4f4f4; /* Cor de fundo suave para a página */
+}
+
+header {
+    background-color: #ffe066;
+    color: white;
+    padding: 10px;
+    text-align: center; 
+}
+
+.menu {
+    display: inline-block;
+    padding-top: 10px;
+}
+
+main{
+    background-color: #1dd1a1;
+}
+
+/* Estilo dos links */
+a {
+    color: white; /* Cor do texto dos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    padding: 7px;
+    margin: 10px; /* Espaçamento dentro do link */
+}
+
+a:hover{
+    background-color:rgb(27, 27, 27);
+    border-radius: 15px;
+}
+
+footer {
+    background-color: #222f3e;
+    color: white;
+    text-align: center; 
+}
+
+img{
+    display: inline-block;
+    background-color: white;
+}
+img:hover{
+    zoom: normal;
+}

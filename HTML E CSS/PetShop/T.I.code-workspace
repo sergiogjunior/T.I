@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../../../../../xampp/htdocs/gerenciador_senhas"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "T.I"
+	}
+}

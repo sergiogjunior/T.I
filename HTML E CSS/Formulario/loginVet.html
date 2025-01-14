@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+
+<h1>Formulário de Alta Veterinária</h1>
+
+    <main>
+        <form action="Formulario" method="post" autocomplete="on">
+            <fieldset style="width: 80%; margin: 5px auto;" class="texto">
+                <legend>Dados Pessoais</legend>
+                <div>
+                    <label for="inome">Nome:</label>
+                    <input class="borda" type="text" name="nome" id="inome" placeholder="Primeiro Nome " autocomplete="name">
+                    <input class="borda" type="text" name="nome1" id="inome1" placeholder="Segundo Nome" autocomplete="name">
+                </div>
+                <br>
+                <div>
+                    <label for="itelefone">Telefone:</label>
+                    <input class="borda" type="tel" name="telefone" id="itelefone" autocomplete="tel" pattern="^\(\d{2}\)\d{4,5}\-\d{4}$" required placeholder="(xx)x xxxx-xxxx">
+                </div>
+                <br>
+                <div>
+                    <label for="iemail">Email:</label>
+                    <input class="borda" type="email" name="email" id="iemail" placeholder="E-mail">
+                </div>
+                <br>               
+            </fieldset>
+            <br><br>
+
+            <fieldset style="width: 80%; margin: 5px auto;">
+                <legend>Dados do Animal</legend>
+                <div>
+                    <label for="inomeanimal">Nome do Animal:</label>
+                    <input class="borda" type="text" name="nomeanimal" id="inomeanimal" placeholder="Nome do Animal " autocomplete="name">
+                </div>
+                <br>
+                <div>
+                    <br>
+                    <fieldset>
+                        <legend>Porte do Animal</legend>
+                            <label for="ipequeno">Pequeno</label>
+                            <input type="radio" name="pequeno" id="ipequeno" checked>
+
+                            <label for="imedio">Médio</label>
+                            <input type="radio" name="medio" id="imedio">
+
+                            <label for="igrande">Grande</label>
+                            <input type="radio" name="grande" id="igrande">
+                    </fieldset>
+                </div>
+                <br>
+                <div>
+
+                </div>
+                <br>
+            </fieldset>
+
+            <br><br>
+            <fieldset style="width: 80%; margin: 5px auto;" class="texto">
+                <legend>Dados Alta</legend>
+                <div>
+                    <label for="idata">Dia da Alta:</label>
+                    <input class="borda" type="date" name="data" id="idata"><br>
+                </div>
+                <br>
+                <div>
+                    <label for="iinstrucao">Instruções pós-tratamento:</label><br>
+                <textarea class="texto" name="instrucao" id="iinstrucao" cols="50" rows="5"></textarea>
+                </div>
+            </fieldset>
+
+        </form>
+    </main>
+</body>
+
+</html>
