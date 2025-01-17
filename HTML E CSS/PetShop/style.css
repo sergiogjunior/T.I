@@ -1,0 +1,72 @@
+.inputdadospessoais{
+   
+    border-radius:10px ;
+    width: 250px;
+ 
+}
+ 
+.inputidade{
+    width: 60px;
+    height: 15px;
+    border-radius: 10px;
+}
+ 
+.inputemail{
+    border-radius: 10px;
+    width: 300px;
+}
+ 
+.inputtelefone{
+    border-radius: 10px;
+}
+ 
+ 
+.fieldsetdadospessoais{
+    border-radius: 10px;
+   
+}
+ 
+ 
+.fieldsetdatas{
+    border-radius: 10px;
+}
+ 
+.fieldsetdadospet{
+    border-radius: 10px;
+}
+ 
+.inputdadospet{
+    border-radius: 10px;
+    width: 180px;
+}
+ 
+.inputidadepet{
+    border-radius: 10px;
+    width: 51px;
+}
+ 
+.iespecie{
+    border-radius: 10px;
+    width: 105px;
+}
+ 
+.iraca{
+    border-radius: 10px;
+    width: 105px;
+}
+ 
+.inputracao{
+    border-radius: 10px;
+    width: 140px;
+   
+}
+ 
+body{
+    background-color:aliceblue;
+}
+ 
+.iperiodoconsumo{
+    border-radius: 10px;
+}
+ 
+tem menu de contexto

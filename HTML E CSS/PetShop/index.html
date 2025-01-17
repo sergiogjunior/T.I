@@ -3,67 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PetShop - Seu Melhor Amigo</title>
+    <title>Formulario</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Icons/icons8-form-96.png" type="image/x-icon">
 </head>
 <body>
-    <header>
-        <h1>PetShop - Seu Melhor Amigo</h1>
-        <nav>
-            <ul>
-                <li><a href="#produtos">Produtos</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-
+ 
+<h1>Formulário</h1>
+<main>
+<form action="formulario.php" method="post" autocomplete="on">
+<fieldset class="fieldsetdadospessoais">
+    <legend>Dados Pessoais</legend>
+    <div>
+        <label for="inome"> Nome:</label>
+        <input class="inputdadospessoais" type = "text" name = "nome" id="inome" required maxlength="50" placeholder="Nome Completo" autocomplete="name">
+    </div>
+ 
+    <br>
+    <div>
    
-        <h2>Produtos para seu Pet</h2>
-        <p>Confira os nossos produtos para cães e gatos:</p>
-        
-        <h3>Brinquedos para Cachorro</h3>
-        <div>
-            <img src="imagens/brinquedo_cachorro_1.jpg" alt="Brinquedo de cachorro 1" width="200">
-            <img src="imagens/brinquedo_cachorro_2.jpg" alt="Brinquedo de cachorro 2" width="200">
-        </div>
-        
-        <h3>Brinquedos para Gato</h3>
-        <div>
-            <img src="imagens/brinquedo_gato_1.jpg" alt="Brinquedo de gato 1" width="200">
-            <img src="imagens/brinquedo_gato_2.jpg" alt="Brinquedo de gato 2" width="200">
-        </div>
-        
-        <h3>Ração para Cachorro</h3>
-        <div>
-            <img src="imagens/racao_cachorro.jpg" alt="Ração de cachorro" width="200">
-        </div>
-        
-        <h3>Ração para Gato</h3>
-        <div>
-            <img src="imagens/racao_gato.jpg" alt="Ração de gato" width="200">
-        </div>
-    
-
-        <h2>Serviços</h2>
-        <p>Oferecemos diversos serviços para cuidar do seu pet, como:</p>
-        <ul>
-            <li>Banho e Tosa</li>
-            <li>Consultas Veterinárias</li>
-            <li>Treinamento de Cães</li>
-        </ul>
-
-    
-        <h2>Entre em Contato</h2>
-        <p>Fale conosco para mais informações ou para fazer um pedido:</p>
-        <form action="#" method="post">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
-
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
-
-            <button type="submit">Enviar</button>
-        </form>
-    
+        <label for="iidade">Idade:</label>
+        <input class="inputidade" type="number" name="idade" id="iidade" min="18" max="99" placeholder="18 a 99" step="1"><!-- value="5" -->
+    </div>
+ 
+    <br>
+    <div>
+        <label for="iemail">E-mail</label>
+        <input class="inputemail" type="email" name="email" id="iemail" placeholder="e-mail" autocomplete="email" required>
+    </div>
+    <br>
+    <div>
+        <label for="itelefone">Telefone:</label>
+        <input class="inputtelefone" type="tel" name="telefone" id="itelefone" autocomplete="tel" pattern="^\(\d{2}\)\d{4,5}\-\d{4}$" required placeholder="(xx)x xxxx-xxxx"> <!-- Expressões Regulares-->                </div>
+</fieldset>
+<br>
+<fieldset class="fieldsetdadospet">
+    <legend>Dados do Animal</legend>
+    <div>
+        <label for="inome"> Nome:</label>
+        <input class="inputdadospet" type = "text" name = "nome" id="inome" required maxlength="50" placeholder="Nome Completo" autocomplete="name">
+    </div>
+<br>
+    <div>
+        <label for="iidadepet">Idade:</label>
+        <input class="inputidadepet" type="number" name="idade" id="iidade" min="1" max="17" placeholder="1 a 17" step="1"><!-- value="5" -->
+</div>
+<br>
+<div>
+    <label for="iraca">Raça: </label><select name="raça" id="iraca" class="iraca">
+    <option value="" selected required>--- Escolha ---</option>
+    <optgroup label="Raças">
+        <option value="Cães">Cães</option>
+        <option value="Gatos">Gatos</option>
+        <option value="Roedores">Roedores</option>
+        <option value="Aves">Aves</option>
+        <option value="Peixes">Peixes</option>
+        <option value="Invertebrados">Invertebrados</option>
+        </optgroup>
+</div>
+ 
+<br>
+<div>
+<label for="iespecie">Espécie: </label><select name="espécie" id="iespecie" class="iespecie">
+<option value="" selected required>--- Escolha ---</option>
+ 
+<optgroup label="Cães">
+<option value="Cães">Poodle</option>
+<option value="Cães">Shih Tzu</option>
+<option value="Cães">Golden Retriever</option>
+</optgroup>
+ 
+<optgroup label="Gatos">
+<option value="Gatos">Siamês</option>
+<option value="Gatos">Persa</option>
+<option value="Gatos">Maine Coon</option>
+</optgroup>
+ 
+<optgroup label="Roedores">
+<option value="Roedores">Hamster (sírio ou anão-russo)</option>
+<option value="Roedores">Porquinho-da-índia</option>
+<option value="Roedores">Chinchila</option>
+<option value="Roedores">Gerbil</option>
+</optgroup>
+ 
+<optgroup label="Aves">
+    <option value="Aves">Calopsitas</option>
+    <option value="Aves">Periquitos</option>
+    <option value="Aves">Canários</option>
+    <option value="Aves">Agapornis</option>
+    <option value="Aves">Papagaios</option>
+    </optgroup>
+<optgroup label="Répteis e Anfíbios">
+    <option value="Répteis e Anfíbios">Jabutis</option>
+    <option value="Répteis e Anfíbios">Iguanas</option>
+    <option value="Répteis e Anfíbios">Geckos</option>
+    <option value="Répteis e Anfíbios">Cobras</option>
+    </optgroup>
+ 
+    <optgroup label="Peixes De água doce:">
+        <option value="Aves">Betta</option>
+        <option value="Aves">Neon</option>
+        <option value="Aves">Guppy</option>
+        <option value="Aves">Peixe-anjo</option>
+        <option value="Aves">Platy</option>
+        </optgroup>
+        <optgroup label="Peixes De água salgada:">
+            <option value="Aves">Peixe-palhaço</option>
+            <option value="Aves">Tangs</option>
+            </optgroup>
+ 
+        <optgroup label="Invertebrados">
+            <option value="Aves">Camaleões</option>
+            <option value="Aves">Caramujos africanos</option>
+            <option value="Aves">Tarântulas e outros aracnídeos criados como pets</option>
+            </optgroup>
+        </select>
+    </div>
+ 
+    <br>
+    <div>
+        <legend>Sexo:</legend>
+        <label for="smasc">Masculino</label>
+        <input type="radio" name="sexo" id="smasc" checked>
+       
+        <label for="sfem">Feminino</label>
+        <input type="radio" name="sexo" id="sfem">
+    </div>
+<br>
+    <div>
+        <label for="iracao"> Ração de Preferencia: </label>
+        <input class="inputracao" type = "text" name = "racao" id="iracao" required maxlength="50" placeholder="Ração de Preferencia" autocomplete="nickname">
+    </div>
+ 
+    <br>
+    <div>
+        <label for="iperiodoconsumo"> Período de Consumo: </label>
+        <input class="iperiodoconsumo" type = "text" name = "racao" id="iperiodoconsumo" required maxlength="50" placeholder="Período de Consumo" autocomplete="nickname">
+    </div>
+</fieldset>
+</form>
+ 
+</main>
 </body>
 </html>
+tem menu de contexto
