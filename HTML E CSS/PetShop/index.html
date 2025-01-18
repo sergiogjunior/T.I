@@ -3,147 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="Icons/icons8-form-96.png" type="image/x-icon">
+    <link rel="shortcut icon" href="icon/PET_mANIA-removebg-preview.ico" type="image/x-icon">
+    <title>Sobre - Casa dos Bichos</title>
 </head>
 <body>
- 
-<h1>Formulário</h1>
-<main>
-<form action="formulario.php" method="post" autocomplete="on">
-<fieldset class="fieldsetdadospessoais">
-    <legend>Dados Pessoais</legend>
-    <div>
-        <label for="inome"> Nome:</label>
-        <input class="inputdadospessoais" type = "text" name = "nome" id="inome" required maxlength="50" placeholder="Nome Completo" autocomplete="name">
-    </div>
- 
-    <br>
-    <div>
-   
-        <label for="iidade">Idade:</label>
-        <input class="inputidade" type="number" name="idade" id="iidade" min="18" max="99" placeholder="18 a 99" step="1"><!-- value="5" -->
-    </div>
- 
-    <br>
-    <div>
-        <label for="iemail">E-mail</label>
-        <input class="inputemail" type="email" name="email" id="iemail" placeholder="e-mail" autocomplete="email" required>
-    </div>
-    <br>
-    <div>
-        <label for="itelefone">Telefone:</label>
-        <input class="inputtelefone" type="tel" name="telefone" id="itelefone" autocomplete="tel" pattern="^\(\d{2}\)\d{4,5}\-\d{4}$" required placeholder="(xx)x xxxx-xxxx"> <!-- Expressões Regulares-->                </div>
-</fieldset>
-<br>
-<fieldset class="fieldsetdadospet">
-    <legend>Dados do Animal</legend>
-    <div>
-        <label for="inome"> Nome:</label>
-        <input class="inputdadospet" type = "text" name = "nome" id="inome" required maxlength="50" placeholder="Nome Completo" autocomplete="name">
-    </div>
-<br>
-    <div>
-        <label for="iidadepet">Idade:</label>
-        <input class="inputidadepet" type="number" name="idade" id="iidade" min="1" max="17" placeholder="1 a 17" step="1"><!-- value="5" -->
-</div>
-<br>
-<div>
-    <label for="iraca">Raça: </label><select name="raça" id="iraca" class="iraca">
-    <option value="" selected required>--- Escolha ---</option>
-    <optgroup label="Raças">
-        <option value="Cães">Cães</option>
-        <option value="Gatos">Gatos</option>
-        <option value="Roedores">Roedores</option>
-        <option value="Aves">Aves</option>
-        <option value="Peixes">Peixes</option>
-        <option value="Invertebrados">Invertebrados</option>
-        </optgroup>
-</div>
- 
-<br>
-<div>
-<label for="iespecie">Espécie: </label><select name="espécie" id="iespecie" class="iespecie">
-<option value="" selected required>--- Escolha ---</option>
- 
-<optgroup label="Cães">
-<option value="Cães">Poodle</option>
-<option value="Cães">Shih Tzu</option>
-<option value="Cães">Golden Retriever</option>
-</optgroup>
- 
-<optgroup label="Gatos">
-<option value="Gatos">Siamês</option>
-<option value="Gatos">Persa</option>
-<option value="Gatos">Maine Coon</option>
-</optgroup>
- 
-<optgroup label="Roedores">
-<option value="Roedores">Hamster (sírio ou anão-russo)</option>
-<option value="Roedores">Porquinho-da-índia</option>
-<option value="Roedores">Chinchila</option>
-<option value="Roedores">Gerbil</option>
-</optgroup>
- 
-<optgroup label="Aves">
-    <option value="Aves">Calopsitas</option>
-    <option value="Aves">Periquitos</option>
-    <option value="Aves">Canários</option>
-    <option value="Aves">Agapornis</option>
-    <option value="Aves">Papagaios</option>
-    </optgroup>
-<optgroup label="Répteis e Anfíbios">
-    <option value="Répteis e Anfíbios">Jabutis</option>
-    <option value="Répteis e Anfíbios">Iguanas</option>
-    <option value="Répteis e Anfíbios">Geckos</option>
-    <option value="Répteis e Anfíbios">Cobras</option>
-    </optgroup>
- 
-    <optgroup label="Peixes De água doce:">
-        <option value="Aves">Betta</option>
-        <option value="Aves">Neon</option>
-        <option value="Aves">Guppy</option>
-        <option value="Aves">Peixe-anjo</option>
-        <option value="Aves">Platy</option>
-        </optgroup>
-        <optgroup label="Peixes De água salgada:">
-            <option value="Aves">Peixe-palhaço</option>
-            <option value="Aves">Tangs</option>
-            </optgroup>
- 
-        <optgroup label="Invertebrados">
-            <option value="Aves">Camaleões</option>
-            <option value="Aves">Caramujos africanos</option>
-            <option value="Aves">Tarântulas e outros aracnídeos criados como pets</option>
-            </optgroup>
-        </select>
-    </div>
- 
-    <br>
-    <div>
-        <legend>Sexo:</legend>
-        <label for="smasc">Masculino</label>
-        <input type="radio" name="sexo" id="smasc" checked>
-       
-        <label for="sfem">Feminino</label>
-        <input type="radio" name="sexo" id="sfem">
-    </div>
-<br>
-    <div>
-        <label for="iracao"> Ração de Preferencia: </label>
-        <input class="inputracao" type = "text" name = "racao" id="iracao" required maxlength="50" placeholder="Ração de Preferencia" autocomplete="nickname">
-    </div>
- 
-    <br>
-    <div>
-        <label for="iperiodoconsumo"> Período de Consumo: </label>
-        <input class="iperiodoconsumo" type = "text" name = "racao" id="iperiodoconsumo" required maxlength="50" placeholder="Período de Consumo" autocomplete="nickname">
-    </div>
-</fieldset>
-</form>
- 
-</main>
+    
+    <header class="header-logo">
+        <img src="../imagens/clinic/PET_mANIA-removebg-preview.png" alt="Casa dos Bichos" class="logo">
+    </header>
+
+    <section class="sobre-clinica">
+        <div class="container">
+            <h1>Sobre a Casa dos Bichos</h1>
+            <p>A Casa dos Bichos é uma clínica veterinária que nasceu com a missão de oferecer cuidados de saúde e bem-estar para cães e gatos, sempre com muito carinho, dedicação e respeito. Sabemos o quanto os nossos pets são especiais, e por isso, nos dedicamos a oferecer um atendimento humanizado e personalizado para cada animalzinho que passa por nossas portas.
+Nosso compromisso é garantir que seus melhores amigos recebam o melhor atendimento, com profissionais altamente qualificados e equipamentos de última geração. Buscamos proporcionar um ambiente acolhedor e seguro, onde tanto os animais quanto seus tutores se sintam à vontade e confiantes.</p>
+
+            <div class="missao">
+                <h2>Nossa Missão</h2>
+                <p>Nossa missão é proporcionar cuidados veterinários de excelência, promovendo a saúde, o conforto e o bem-estar dos nossos pacientes. Trabalhamos com carinho e atenção em cada atendimento, buscando sempre soluções adequadas para cada caso. Acreditamos que o amor e a empatia são a base de um bom tratamento, e isso é refletido em cada visita à nossa clínica.</p>
+            </div>
+
+            <div class="visao">
+                <h2>Nossa Visão</h2>
+                <p>Ser a clínica veterinária de referência em nossa região, reconhecida pelo compromisso com a saúde animal, excelência no atendimento e pela constante inovação em tratamentos veterinários. Queremos ser uma clínica onde os tutores confiam seus animais com a certeza de que estão em boas mãos.</p>
+            </div>
+
+            <div class="valores">
+                <h2>Nossos Valores</h2>
+                <ul>
+                    <li>Cuidado com Empatia: Tratamos cada pet como se fosse da nossa própria família.</li>
+                    <li>Profissionalismo: Nossos veterinários e equipe são altamente capacitados e sempre em busca de atualizações sobre as melhores práticas de cuidado.</li>
+                    <li>Inovação: Buscamos sempre novas soluções e tratamentos para garantir o melhor para o seu pet.</li>
+                    <li>Compromisso com o Bem-Estar: Colocamos o conforto e saúde do seu animal como nossa prioridade.</li>
+                </ul>
+            </div>
+
+            <div class="equipe">
+                <h2>Nossa Equipe</h2>
+                <p>A nossa equipe é formada por profissionais dedicados e apaixonados por animais. Contamos com veterinários especializados, enfermeiros veterinários, técnicos e auxiliares, todos comprometidos com o bem-estar dos nossos pacientes.
+                    Com uma abordagem individualizada, entendemos que cada pet é único, e por isso, adaptamos o atendimento às necessidades de cada um, garantindo um tratamento eficaz e acolhedor.
+                    Seja para consultas de rotina, exames ou procedimentos mais complexos, a Casa dos Bichos está aqui para cuidar do seu melhor amigo com todo o carinho e respeito que ele merece.
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
-tem menu de contexto
