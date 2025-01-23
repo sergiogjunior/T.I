@@ -1,0 +1,22 @@
+*{
+    margin: auto;
+    padding: auto;
+}
+
+header{
+  text-align: center;  
+}
+
+body{
+    
+}
+
+div{
+    background-color: black;
+    width: 26%;
+}
+
+.img1{
+    align-items: center;
+    
+}
