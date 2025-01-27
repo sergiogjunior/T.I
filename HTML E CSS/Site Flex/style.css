@@ -1,22 +1,57 @@
 *{
-    margin: auto;
-    padding: auto;
+    margin: 0px;
+    padding: 0px;
 }
+
+
 
 header{
-  text-align: center;  
+    width: 200px;
+    font-size: 25px;
+    display: block;
+    background-color: rgba(211, 211, 211, 0.189);
+    width: 100vw;
+    text-align: center;
+    color: white;
+    opacity: 80%;
+    padding: 5px;
 }
 
-body{
-    
+main{
+    display: flex;
+    flex-flow: row wrap;
+    margin: 10px;
+    max-width: 75vw;
 }
 
-div{
-    background-color: black;
-    width: 26%;
+.container{
+    width: 100vw;
+    display: flex;
 }
 
-.img1{
+section:hover{
+    opacity: 100%;
+}
+
+section{
+    display: flex ;
+    flex-flow: row wrap;
+    justify-content: center;
     align-items: center;
-    
+    flex: auto;
+    background-color: rgb(239, 239, 239);
+    border-radius: 10%;
+    opacity: 80%;
+    margin: 5px;
+    width: 200px;
+    height: 350px;
+}
+
+section>p{
+    padding: 5px;
+}
+
+.imgjogos{
+    width: 100%;
+    max-height: 320px;
 }
