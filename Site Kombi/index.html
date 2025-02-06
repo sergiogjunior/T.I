@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blog da Kombi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <img src="kombi-logo.png" alt="Logo Blog Kombi">
+            <h1>Blog da Kombi</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">História</a></li>
+                <li><a href="#">Postagens</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo -->
+    <main>
+        <!-- Postagens -->
+        <section class="postagens">
+            <article class="post">
+                <img src="kombi1.jpg" alt="Kombi clássica">
+                <h2>A História da Kombi</h2>
+                <p>A Kombi, um dos ícones do transporte mundial, tem uma longa história desde sua criação na década de 1950...</p>
+                <button class="ler-mais">Leia mais</button>
+            </article>
+
+            <article class="post">
+                <img src="kombi2.jpg" alt="Kombi moderna">
+                <h2>Transformando a Kombi: A Nova Era</h2>
+                <p>A Kombi não é só um carro, é um estilo de vida! Confira as modificações que estão fazendo sucesso em 2025...</p>
+                <button class="ler-mais">Leia mais</button>
+            </article>
+
+            <article class="post">
+                <img src="kombi3.jpg" alt="Kombi e sua cultura">
+                <h2>Cultura Kombi: Mais do que um veículo</h2>
+                <p>Não é apenas sobre dirigir, é sobre estilo e liberdade. Descubra como a Kombi virou símbolo de uma geração...</p>
+                <button class="ler-mais">Leia mais</button>
+            </article>
+        </section>
+
+        <!-- Postagem Completa (Exemplo) -->
+        <section class="postagem-completa">
+            <h2>A História da Kombi</h2>
+            <img src="kombi1.jpg" alt="Kombi clássica">
+            <p>Em 1950, a Volkswagen lançou a Kombi, um dos modelos de transporte mais icônicos do mundo. Com seu formato característico e versatilidade, a Kombi conquistou corações ao redor do planeta...</p>
+            <p>Com o tempo, a Kombi não era apenas um veículo de transporte, mas um símbolo de liberdade, viagens e uma vida alternativa...</p>
+            <h3>Primeira Geração: O Início da Lenda</h3>
+            <p>A primeira geração da Kombi foi projetada para ser prática, acessível e funcional...</p>
+            <div class="comentarios">
+                <h3>Comentários</h3>
+                <div class="comentario">
+                    <p><strong>João:</strong> "A Kombi é um símbolo de toda uma época! Fiquei muito feliz ao ver o legado dela se perpetuando até hoje."</p>
+                </div>
+                <div class="comentario">
+                    <p><strong>Maria:</strong> "Comprei minha Kombi no final dos anos 70 e até hoje é meu xodó!"</p>
+                </div>
+            </div>
+            <form class="form-comentarios">
+                <label for="comentario">Deixe seu comentário:</label>
+                <textarea id="comentario" placeholder="Escreva seu comentário..." required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <!-- Formulário de Contato -->
+        <section class="contato">
+            <h2>Entre em Contato</h2>
+            <form action="#" method="POST">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" required>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" required>
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>© 2025 Blog da Kombi. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
