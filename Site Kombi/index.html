@@ -1,54 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Kombiando por aí</title>
-</head>
-<body>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Meow+Script&display=swap" rel="stylesheet">
-
+</head>
+<body>
     <header>
         <nav>
-            <img src="imagens/image-removebg-preview.png" alt="">
-
-            <p>Home</p>
-            <p>Minha História</p>
-            <p>Contato</p>  
+            <img src="imagens/image-removebg-preview.png" alt="Logo do Kombiando por aí">
+            <ul>
+                <li><a href="default.asp">Home</a></li>
+                <li><a href="#">Minha História</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
         </nav>
     </header>
     
-    <div class="container">
-        <section class="textoB">
-            <h1>
-                Com calma, pois a jornada é longa
-            </h1>
-            
-            <img src="imagens/image (1).png" alt="" class="banner">
-
-            <p>Bem-vindo ao Kombiando por Aí! Sou um Nômade Digital vivendo e trabalhando dentro da minha Kombi Home.
-            Aqui compartilho minhas aventuras, experiências e tudo o que aprendo ao rodar o mundo.
-            Vem acompanhar essa jornada de liberdade e descobertas!</p>
+    <main class="container">
+        <section class="intro">
+            <h1>Com calma, pois a jornada é longa</h1>
+            <img src="imagens/image (1).png" alt="Kombi na estrada" class="banner">
+            <p>Bem-vindo ao Kombiando por Aí! Sou um Nômade Digital vivendo e trabalhando dentro da minha Kombi Home. Aqui compartilho minhas aventuras, experiências e tudo o que aprendo ao rodar o mundo. Vem acompanhar essa jornada de liberdade e descobertas!</p>
         </section>
 
         <section class="image-gallery">
             <div class="image-item">
-                <img src="imagens/fotografia-na-estrada.png" alt="Fotografia na estrada">
+                <img src="imagens/fotografia-na-estrada.png" alt="Fotografia de nossa jornada na estrada">
                 <p class="caption">Fotografia de nossa jornada na estrada</p>
             </div>
 
             <div class="image-item">
-                <img src="imagens/filmagem-solo-e-drone-na-estrada.png" alt="Filmagem na estrada">
+                <img src="imagens/filmagem-solo-e-drone-na-estrada.png" alt="Filmagem de drone capturando nossa viagem">
+                <p class="caption">Filmagem de drone capturando nossa viagem</p>
+            </div>
+
+            <div class="image-item">
+                <img src="imagens/filmagem-solo-e-drone-na-estrada.png" alt="Filmagem de drone capturando nossa viagem">
+                <p class="caption">Filmagem de drone capturando nossa viagem</p>
+            </div>
+
+            <div class="image-item">
+                <img src="imagens/filmagem-solo-e-drone-na-estrada.png" alt="Filmagem de drone capturando nossa viagem">
                 <p class="caption">Filmagem de drone capturando nossa viagem</p>
             </div>
         </section>
-    </div>
 
-  
-    
-    
+        <section class="historia">
+            <h2>Conheça nossa história</h2>
+            <a href="https://www.youtube.com/watch?v=28t3k2cJzfE">
+                <img src="imagens/imagem historia.png" alt="" >
+            </a>
+        </section>
+
+        <section>
+            <form action="seu_script_de_processamento.php" method="POST">
+
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required><br><br>
+        
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required><br><br>
+        
+                <label for="telefone">Telefone de Contato:</label>
+                <input type="tel" id="telefone" name="telefone" required><br><br>
+        
+                <label for="pet">Nome do Pet:</label>
+                <input type="text" id="pet" name="pet" required><br><br>
+        
+                <label for="idade">Idade do Pet:</label>
+                <input type="text" id="idade" name="idade" required><br><br>
+        
+                <label for="motivo">Motivo do Contato:</label>
+                <select id="motivo" name="motivo" required>
+                    <option value="agendar_consulta">Agendar Consulta</option>
+                    <option value="informacoes">Pedir Informações</option>
+                    <option value="outros">Outros</option>
+                </select><br><br>
+        
+                <label for="mensagem">Mensagem:</label><br>
+                <textarea id="mensagem" name="mensagem" rows="4" required></textarea><br><br>
+        
+                <label for="contato">Como prefere ser contatado?</label>
+                <select id="contato" name="contato" required>
+                    <option value="email">E-mail</option>
+                    <option value="telefone">Telefone</option>
+                </select><br><br>
+        
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+
+        </section>
+    </main>
 </body>
 </html>

@@ -4,15 +4,25 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Arial', sans-serif; 
+}
+
+body {
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #f0f0f0;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 nav {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    height: 80px;
-    background-color: #f0f0f0;
+    padding: 0 20px;
 }
 
 nav img {
@@ -20,81 +30,184 @@ nav img {
     height: auto;
 }
 
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    font-size: 1.2em;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #007bff;
+}
+
 h1 {
-    font-size: 50px;
+    font-size: 3rem;
     text-align: center;
-    font-family: "Meow Script", serif;
+    font-family: 'Meow Script', cursive;
+    color: #333;
+    margin-top: 20px;
 }
 
-/* Estilo para a section */
-section {
+.intro {
     position: relative;
+    padding: 30px;
+    text-align: center;
 }
 
-/* A imagem dentro da section */
-section img.banner {
+.intro img.banner {
     width: 100%;
     opacity: 40%;
     background-size: cover;
     background-position: center;
+    border-radius: 10px;
 }
 
-/* Posicionando o parágrafo sobre a imagem */
-section p {
+.intro p {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     text-align: center;
-    width: 90%;
+    width: 80%;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
+    display: flex;
 }
 
-/* Estilo para a galeria de imagens (cards) */
 .image-gallery {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    flex-wrap: wrap;
     margin-top: 30px;
-    flex-wrap: wrap; /* Permite que as imagens se ajustem em telas pequenas */
-    gap: 20px; /* Espaçamento entre os cards */
+    gap: 20px;
+    padding: 0 20px;
 }
 
-.image-card {
-    width: 45%; /* Largura inicial para telas grandes */
+.image-item {
+    width: calc(25% - 20px);
     text-align: center;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.image-card:hover {
+.image-item:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.image-card img {
-    width: 100%;
+.image-item img {
+    width: 45%; 
     height: auto;
     border-bottom: 2px solid #f0f0f0;
 }
 
 .caption {
-    font-size: 1.2em;
+    font-size: 1.2rem;
     margin-top: 10px;
     color: #333;
     padding: 10px;
 }
 
-/* Responsividade para telas menores */
-@media screen and (max-width: 768px) {
-    .image-card {
-        width: 100%; /* As imagens ficam 100% da largura na tela menor */
+.historia{
+    margin-top: 60px;
+    background-color: #94f1f7;
+    text-align: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+
+}
+
+h2{
+    font-size: 3rem;
+    text-align: center;
+    font-family: 'Meow Script', cursive;
+    color: #333;
+    margin-top: 20px;
+}
+
+.historia img{
+    margin-top: 20px;
+    border-radius: 10px;
+    width: 700px;
+}
+
+.historia img:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+a {
+    color: #4CAF50;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 1024px) {
+    .image-item {
+        width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 768px) {
+    .image-item {
+        width: 100%;
     }
 
     section p {
@@ -103,9 +216,9 @@ section p {
     }
 }
 
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
     h1 {
-        font-size: 2.5em;
+        font-size: 2.5rem;
     }
 
     section p {
