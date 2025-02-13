@@ -1,55 +1,118 @@
 @import url('https://fonts.googleapis.com/css2?family=Meow+Script&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 nav {
     display: flex;
-    justify-content: space-evenly; 
-    align-items: center; 
+    justify-content: space-evenly;
+    align-items: center;
     padding: 10px;
     height: 80px;
     background-color: #f0f0f0;
 }
 
 nav img {
-    width: 70px; 
+    width: 70px;
     height: auto;
-    justify-content: start;
 }
 
-main{
-
-}
-
-h1{
+h1 {
     font-size: 50px;
     text-align: center;
     font-family: "Meow Script", serif;
 }
 
-section img{
+/* Estilo para a section */
+section {
+    position: relative;
+}
+
+/* A imagem dentro da section */
+section img.banner {
     width: 100%;
     opacity: 40%;
-    position: relative;
-
+    background-size: cover;
+    background-position: center;
 }
 
-section p{
+/* Posicionando o parágrafo sobre a imagem */
+section p {
     position: absolute;
-    top: 30%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 26px;
-    background-color: aliceblue;
-    display: flex;  
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+    width: 90%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
 }
 
-.imgs{  
-    align-items: center;
-    width: 100px;
-    justify-content: space-between;
-    align-content: center;
+/* Estilo para a galeria de imagens (cards) */
+.image-gallery {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    flex-wrap: wrap; /* Permite que as imagens se ajustem em telas pequenas */
+    gap: 20px; /* Espaçamento entre os cards */
+}
+
+.image-card {
+    width: 45%; /* Largura inicial para telas grandes */
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.image-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.caption {
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: #333;
+    padding: 10px;
+}
+
+/* Responsividade para telas menores */
+@media screen and (max-width: 768px) {
+    .image-card {
+        width: 100%; /* As imagens ficam 100% da largura na tela menor */
+    }
+
+    section p {
+        font-size: 1.2em;
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    section p {
+        font-size: 1em;
+    }
+
+    .caption {
+        font-size: 1em;
+    }
 }
