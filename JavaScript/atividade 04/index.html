@@ -7,11 +7,11 @@
 </head>
 <body>
     <script>
-        var n1 = Number.parseFloat(window.prompt('Digite a altura: '))
-        var n2 = Number.parseFloat(window.prompt('Digite seu peso: '))
+        var peso = Number.parseFloat(window.prompt('Digite seu peso: '));
+        var altura = Number.parseFloat(window.prompt('Digite a altura: '));
         
-        var calculo = n2 /(n1*n1);
-        window.alert('A soma do seu IMC é: ' + soma)
+        var imc = peso /(altura*altura);
+        window.alert('A soma do seu IMC é: ' + imc)
     </script>
 </body>
 </html>
