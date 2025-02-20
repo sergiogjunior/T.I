@@ -1,0 +1,26 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: antiquewhite;
+}
+
+main{
+    width: 600px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+div{
+    color: white;
+    padding-top: 10px;
+    width: 20%;
+    height: 200px;
+    margin-right: -4px;
+    display: inline-block;
+    background-color: white;
+    text-align: center;
+    color: black;
+}
