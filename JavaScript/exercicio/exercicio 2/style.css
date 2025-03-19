@@ -1,0 +1,38 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    width: 100%;
+    background-color: rgb(75, 75, 75);
+    color: white;
+}
+
+header{
+    margin-top: 10px;
+    text-align: center;
+}
+
+section{
+    width: 500px;
+    height: 400px;
+    margin: auto;
+    margin-top: 10px;
+    background-color: rgb(159, 159, 159);
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.603);
+}
+
+div{
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+#imagem{
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    align-items: center;
+}
