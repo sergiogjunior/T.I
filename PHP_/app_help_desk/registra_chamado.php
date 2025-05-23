@@ -11,7 +11,7 @@ $descricao = isset($_POST['descricao']) ? str_replace('|', '-', $_POST['descrica
 $dados = $id . '|' . $perfil . '|' . $nome . '|' . $titulo . '|' . $categoria . '|' . $descricao . PHP_EOL;
 var_dump($dados);
 
-$arquivo = fopen('registro.hd', 'a');
+$arquivo = fopen('../../../registros/registro.hd', 'a');
 
 
 if ($arquivo === false) {
