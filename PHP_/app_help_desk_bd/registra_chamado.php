@@ -1,24 +1,20 @@
 <?php
-require_once "validador_acesso.php";
+    require_once "validador_acesso.php";
+    require 'config.php';
 
-$id = str_replace('|', '-', $_SESSION['id']);
-$perfil = str_replace('|', '-', $_SESSION['perfil']);
-$nome = str_replace('|', '-', $_SESSION['nome']);
-$titulo = isset($_POST['titulo']) ? str_replace('|', '-', $_POST['titulo']) : '';
-$categoria = isset($_POST['categoria']) ? str_replace('|', '-', $_POST['categoria']) : '';
-$descricao = isset($_POST['descricao']) ? str_replace('|', '-', $_POST['descricao']) : '';
+    $titulo = $_POST['titulo'];
+    $categoria = $_POST['categoria'];
+    $descricao = $_POST['descricao'];
+    $id_usuario = $_SESSION['id'];
+    $statuschamado = 'Aberto';
 
-$dados = $id . '|' . $perfil . '|' . $nome . '|' . $titulo . '|' . $categoria . '|' . $descricao . PHP_EOL;
-var_dump($dados);
+    //Inserção de dados no banco
+    $sql = "INSERT INTO chamados(titulo, categoria, descricao, id_usuario, statuschamado) VALUES('{$titulo}', '{$categoria}', '{$descricao}', '{$id_usuario}', '{$statuschamado}')";
 
-$arquivo = fopen('../../../registros/registro.hd', 'a');
+    $res = $conexao->query($sql);
 
-
-if ($arquivo === false) {
-    die('Erro ao abrir o arquivo para escrita.');
-}
-
-fwrite($arquivo, $dados);
-fclose($arquivo);
-
-header('location: abrir_chamado.php?cadastro=sucesso');
+        if($res==true){
+            //Redirecionando o arquivo e passando os dados para efetivar um aviso com alert em javascript
+            header('location: abrir_chamado.php?cadastro=efetuado');
+        } else { header('location: abrir_chamado.php?cadastro=falha');}
+?>

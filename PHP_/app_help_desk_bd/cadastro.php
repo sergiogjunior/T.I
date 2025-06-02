@@ -20,12 +20,11 @@
 
   <nav class="navbar navbar-dark bg-dark">
     <a class="navbar-brand" href="index.php">
-      <img src="../app_help_desk_bd/imagens/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
       App Help Desk
     </a>
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="index.php">VOLTAR</a>
+        <a href="index.php"><img src="./icon_sair.png" alt=""></a>
       </li>
     </ul>
   </nav>
@@ -37,7 +36,6 @@
         <div class="card">
           <div class="card-header">
             Cadastre-se:
-            <img src="imagens/user.png" style="margin-left: 175px; width:35px" alt="">
           </div>
           <div class="card-body">
             <form action="valida_cadastro.php" method="POST">
