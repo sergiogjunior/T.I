@@ -14,7 +14,7 @@ $row = $res->fetch_object();
   <title>App Help Desk</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="icon" href="img/logo.png" type="image/x-icon">
+  <link rel="icon" href="imagens/logo.png" type="image/x-icon">
 
   <style>
     .card-home {
@@ -29,12 +29,12 @@ $row = $res->fetch_object();
 
   <nav class="navbar navbar-dark bg-dark">
     <a class="navbar-brand" href="#">
-      <img src="../../../registros/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      <img src="../app_help_desk_bd/imagens/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
       App Help Desk
     </a>
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a href="index.php"><img src="./icon_sair.png" alt=""></a>
+        <a class="nav-link" href="logoff.php">SAIR</a>
       </li>
     </ul>
   </nav>
@@ -51,7 +51,7 @@ $row = $res->fetch_object();
             <div class="row">
               <div class="col-2 d-flex justify-content-center">
                 <a href="abrir_chamado.php">
-                  <img src="../../../registros/formulario_abrir_chamado.png" width="70" height="70">
+                  <img src="../app_help_desk_bd/imagens/formulario_abrir_chamado.png" width="70" height="70">
                   <p>&nbsp&nbsp&nbsp&nbspAbrir</p>
                 </a>
 
