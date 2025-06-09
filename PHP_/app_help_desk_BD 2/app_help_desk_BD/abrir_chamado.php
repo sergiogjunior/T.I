@@ -11,39 +11,30 @@ require_once "validador_acesso.php";
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="icon" href="imagens/logo.png" type="image/x-icon">
 
-  <style>
-    .card-abrir-chamado {
-      padding: 30px 0 0 0;
-      width: 100%;
-      margin: 0 auto;
-    }
-  </style>
+  <link rel="stylesheet" href="CSS/style.css"> 
 </head>
 
 <body>
   <nav class="navbar navbar-dark bg-dark">
     <a class="navbar-brand" href="home.php">
-      <img src="" alt="">
-      <img src="../app_help_desk_BD/imagens/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      <img src="imagens/logo.png" width="30" height="30" class="d-inline-block align-top" alt="Logo App Help Desk">
       App Help Desk
     </a>
   </nav>
 
   <div class="container">
-    <div class="row">
-
-      <div class="card-abrir-chamado">
+    <div class="row w-100 justify-content-center"> <div class="card-abrir-chamado">
         <div class="card">
           <div class="card-header">
             Abertura de chamado
             <?php if (isset($_GET['cadastro']) && $_GET['cadastro'] === 'efetuado') { ?>
-              <div style="color: green;">
+              <div class="text-success">
                 <script>
                   alert('Chamado cadastrado com sucesso!')
                 </script>
               </div>
             <?php } else if (isset($_GET['cadastro']) && $_GET['cadastro'] === 'falha'){ ?>
-              <div style="color: red;">
+              <div class="text-danger">
                 <script>
                   alert('Erro de inserção de chamado no banco, contate o administrador!')
                 </script>
@@ -54,7 +45,6 @@ require_once "validador_acesso.php";
           <div class="card-body">
             <div class="row">
               <div class="col">
-
 
                 <form action="registra_chamado.php" method="POST">
                   <div class="form-group">
@@ -100,6 +90,7 @@ require_once "validador_acesso.php";
         </div>
       </div>
     </div>
+  </div>
 </body>
 
 </html>

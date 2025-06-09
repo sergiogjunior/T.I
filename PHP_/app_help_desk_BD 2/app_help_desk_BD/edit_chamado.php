@@ -21,44 +21,26 @@ $qtdusuarios = $resusuarios->num_rows;
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="icon" href="imagens/logo.png" type="image/x-icon">
 
-  <style>
-    .card-abrir-chamado {
-      padding: 30px 0 0 0;
-      width: 100%;
-      margin: 0 auto;
-    }
-    .hide-on-small {
-      display: none;
-    }
-    @media (min-width: 1000px) {
-      .hide-on-small {
-        display: inline;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="CSS/style.css"> 
+
 </head>
 
 <body>
   <nav class="navbar navbar-dark bg-dark">
     <a class="navbar-brand" href="home.php">
-      <img src="../app_help_desk_BD/imagens/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      <img src="imagens/logo.png" width="30" height="30" class="d-inline-block align-top" alt="Logo App Help Desk">
       App Help Desk
     </a>
-    <ul class="navbar-nav">
+    <ul class="navbar-nav d-flex flex-row">
       <li class="nav-item">
-        <a class="nav-link" href="#">Editar Chamado</a>
-      </li>
-    </ul>
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="editar_chamado.php">VOLTAR</a>
+        <a class="nav-link btn btn-secondary btn-sm" href="editar_chamado.php">VOLTAR</a>
       </li>
     </ul>
   </nav>
 
   <div class="container">
-    <div class="row">
-      <div class="card-abrir-chamado">
+    <div class="row w-100 justify-content-center">
+      <div class="card-abrir-chamado card-edit-chamado">
         <div class="card">
           <div class="card-header">Ordem de Serviço <?php print $row->id_chamado; ?></div>
           <div class="card-body">
@@ -73,34 +55,29 @@ $qtdusuarios = $resusuarios->num_rows;
                     <input name="titulo" type="text" class="form-control" value="<?php print $row->titulo; ?>" required autofocus>
                   </div>
 
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-6 d-flex justify-content-center">
-                        <label class="col-2 d-flex justify-content-center align-self-center hide-on-small">Categoria</label>
-                        <select name="categoria" class="form-control" required>
-                          <option value="<?php print $row->categoria; ?>" selected><?php print $row->categoria; ?></option>
-                          <option value="Criação Usuário">Criação Usuário</option>
-                          <option value="Impressora">Impressora</option>
-                          <option value="Hardware">Hardware</option>
-                          <option value="Software">Software</option>
-                          <option value="Rede">Rede</option>
-                          <option value="Formatação">Formatação</option>
-                          <option value="Orçamento">Orçamento</option>
-                          <option value="Desenvolvimento">Desenvolvimento</option>
-                          <option value="Outros">Outros</option>
-                        </select>
-                      </div>
+                  <div class="form-group">
+                    <label>Categoria</label>
+                    <select name="categoria" class="form-control" required>
+                      <option value="<?php print $row->categoria; ?>" selected><?php print $row->categoria; ?></option>
+                      <option value="Criação Usuário">Criação Usuário</option>
+                      <option value="Impressora">Impressora</option>
+                      <option value="Hardware">Hardware</option>
+                      <option value="Software">Software</option>
+                      <option value="Rede">Rede</option>
+                      <option value="Formatação">Formatação</option>
+                      <option value="Orçamento">Orçamento</option>
+                      <option value="Desenvolvimento">Desenvolvimento</option>
+                      <option value="Outros">Outros</option>
+                    </select>
+                  </div>
 
-                      <div class="col-6 d-flex justify-content-center">
-                        <label class="col-2 d-flex justify-content-center align-self-center hide-on-small">Status</label>
-                        <select name="status" class="form-control" required>
-                          <option value="" disabled selected>Escolha</option>
-                          <option value="Aberto">Aberto</option>
-                          <option value="Andamento">Em andamento</option>
-                          <option value="Finalizado">Finalizado</option>
-                        </select>
-                      </div>
-                    </div>
+                  <div class="form-group">
+                    <label>Status</label>
+                    <select name="status" class="form-control" required>
+                      <option value="Aberto" <?php echo ($row->statuschamado == 'Aberto') ? 'selected' : ''; ?>>Aberto</option>
+                      <option value="Andamento" <?php echo ($row->statuschamado == 'Andamento') ? 'selected' : ''; ?>>Em andamento</option>
+                      <option value="Finalizado" <?php echo ($row->statuschamado == 'Finalizado') ? 'selected' : ''; ?>>Finalizado</option>
+                    </select>
                   </div>
 
                   <div class="form-group">
@@ -115,7 +92,7 @@ $qtdusuarios = $resusuarios->num_rows;
 
                   <div class="form-group">
                     <label>Valor</label>
-                    <input name="valor" type="text" class="form-control" value="<?php print $row->valor; ?>" required autofocus>
+                    <input name="valor" type="text" class="form-control" value="<?php print $row->valor; ?>" required>
                   </div>
 
                   <div class="row mt-5">
