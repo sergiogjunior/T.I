@@ -1,0 +1,58 @@
+/* Estilos específicos para a página "Relatórios" (Home Summary) */
+.card-home-summary {
+    width: 700px;
+    padding-top: 20px;
+    /* Herda o resto dos estilos de .card-login, .card-abrir-chamado, etc. do style.css */
+}
+
+.summary-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.summary-link img {
+    margin-bottom: 10px;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+}
+
+.summary-link p {
+    margin-bottom: 0;
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.summary-abertos {
+    color: #dc3545 !important;
+}
+.summary-abertos:hover {
+    color: #bd2130 !important;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.summary-andamento {
+    color: #ffc107 !important;
+}
+.summary-andamento:hover {
+    color: #e0a800 !important;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.summary-finalizados {
+    color: #28a745 !important;
+}
+.summary-finalizados:hover {
+    color: #1e7e34 !important;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}

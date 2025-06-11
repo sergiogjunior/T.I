@@ -1,0 +1,6 @@
+/* Estilos específicos para a página "Editar Chamado" */
+.card-edit-chamado {
+    width: 700px;
+    padding-top: 20px;
+    /* Herda o resto dos estilos de .card-login, .card-abrir-chamado, etc. do style.css */
+}

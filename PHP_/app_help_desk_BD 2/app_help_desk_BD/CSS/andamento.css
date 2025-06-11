@@ -1,0 +1,22 @@
+/* Estilos específicos para a página "Chamados em Andamento" */
+.status-header {
+    font-weight: bold;
+    text-align: center;
+    color: #f8f9fa !important;
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.status-andamento-bg {
+    background-color: #f39c12 !important; /* Laranja vibrante para "Em Andamento" */
+}
+
+.total-chamados-header {
+    text-align: left !important;
+    font-weight: bold;
+    color: #f8f9fa !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    padding-left: 15px;
+}
+
+/* Herda os estilos de tabela de .admin-table-container, .custom-table-responsive, etc. do style.css */

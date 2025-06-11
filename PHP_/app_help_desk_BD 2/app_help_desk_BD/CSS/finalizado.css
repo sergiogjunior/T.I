@@ -1,0 +1,22 @@
+/* Estilos específicos para a página "Chamados Finalizados" */
+.status-header {
+    font-weight: bold;
+    text-align: center;
+    color: #f8f9fa !important;
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.status-finalizado-bg {
+    background-color: #2ecc71 !important; /* Verde esmeralda para "Finalizado" */
+}
+
+.total-chamados-header {
+    text-align: left !important;
+    font-weight: bold;
+    color: #f8f9fa !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    padding-left: 15px;
+}
+
+/* Herda os estilos de tabela de .admin-table-container, .custom-table-responsive, etc. do style.css */

@@ -1,0 +1,46 @@
+/* Estilos específicos para a página "Consultar Chamado" */
+.card-consultar-chamado {
+    width: 900px;
+    padding-top: 20px;
+    /* Herda o resto dos estilos de .card-login, .card-abrir-chamado, etc. do style.css */
+}
+
+.custom-card-chamado {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    border: 1px solid rgba(255, 0, 0, 0.4) !important;
+    color: #f8f9fa !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 15px;
+}
+
+.card-title-chamado {
+    color: #FFD700 !important;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.card-subtitle-chamado {
+    color: #e0e0e0 !important;
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}
+
+.card-text-chamado {
+    color: #f0f0f0 !important;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.text-right-user, .text-right-os {
+    text-align: right;
+    font-size: 0.95rem;
+}
+
+.chamado-user-info {
+    color: #90EE90 !important;
+    font-weight: 500;
+    margin-bottom: 0 !important;
+}

@@ -35,14 +35,14 @@ body {
     padding: 20px;
 }
 
-/* Estilos para os cards principais: Login, Abrir Chamado, Consultar Chamado, Editar Chamado e Home (Resumo) */
+/* Estilos para os cards principais que são compartilhados */
 .card-login,
 .card-abrir-chamado,
 .card-consultar-chamado,
 .card-edit-chamado,
 .card-home-summary {
     padding: 40px;
-    width: 450px;
+    width: 450px; /* Largura padrão, ajustada por classes específicas */
     max-width: 95%;
     border-radius: 15px;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
@@ -51,46 +51,6 @@ body {
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(231, 76, 60, 0.6);
     color: #e0e0e0;
-}
-
-/* Ajuste de largura específico para o card de abrir chamado */
-.card-abrir-chamado {
-    width: 700px;
-    padding-top: 20px;
-}
-
-/* Ajuste de largura específico para o card de consultar chamado */
-.card-consultar-chamado {
-    width: 900px;
-    padding-top: 20px;
-}
-
-/* Ajuste de largura específico para o card de edição de chamado */
-.card-edit-chamado {
-    width: 700px;
-    padding-top: 20px;
-}
-
-/* Ajuste de largura específico para o card de resumo da home */
-.card-home-summary {
-    width: 700px;
-    padding-top: 20px;
-}
-
-/* Novo estilo para o container da tabela no admin.php, autorizacao_usuarios.php e páginas de status */
-.admin-table-container {
-    display: block;
-    width: 100%;
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 0;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
-    background-color: rgba(255, 255, 255, 0.08);
-    border-radius: 15px;
-    border: 1px solid rgba(231, 76, 60, 0.6);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    overflow: hidden;
 }
 
 .card-header {
@@ -107,21 +67,6 @@ body {
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
 }
 
-.card-login .card-body img {
-    display: block;
-    margin: 0 auto 30px auto;
-    width: 120px;
-    height: auto;
-    border-radius: 50%;
-    border: 4px solid #e74c3c;
-    box-shadow: 0 0 20px rgba(231, 76, 60, 0.9);
-    transition: transform 0.3s ease;
-}
-
-.card-login .card-body img:hover {
-    transform: scale(1.05);
-}
-
 .form-group label {
     color: #FFD700;
     margin-bottom: 8px;
@@ -136,7 +81,7 @@ body {
     margin-bottom: 20px;
     background-color: rgba(255, 255, 255, 0.15);
     border: 2px solid #000000;
-    color: #333333;
+    color: #333333; /* Ajustado para melhor legibilidade */
     transition: all 0.3s ease;
 }
 
@@ -276,122 +221,6 @@ body {
     border: 1px solid rgba(231, 76, 60, 1);
 }
 
-/* --- Estilos para os Cards de Chamados na Consulta --- */
-.custom-card-chamado {
-    background-color: rgba(255, 255, 255, 0.15) !important;
-    border: 1px solid rgba(255, 0, 0, 0.4) !important;
-    color: #f8f9fa !important;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-    margin-bottom: 15px;
-    padding: 15px;
-}
-
-.card-title-chamado {
-    color: #FFD700 !important;
-    font-weight: bold;
-    font-size: 1.2rem;
-    margin-bottom: 5px;
-}
-
-.card-subtitle-chamado {
-    color: #e0e0e0 !important;
-    font-size: 0.95rem;
-    margin-bottom: 5px;
-}
-
-.card-text-chamado {
-    color: #f0f0f0 !important;
-    font-size: 0.9rem;
-    margin-bottom: 10px;
-}
-
-.text-right-user, .text-right-os {
-    text-align: right;
-    font-size: 0.95rem;
-}
-
-.chamado-user-info {
-    color: #90EE90 !important;
-    font-weight: 500;
-    margin-bottom: 0 !important;
-}
-
-/* --- Estilos para a Tabela de Admin, Autorização e Listagens por Status --- */
-.admin-table-container {
-    display: block;
-    width: 100%;
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 0;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
-    background-color: rgba(255, 255, 255, 0.08);
-    border-radius: 15px;
-    border: 1px solid rgba(231, 76, 60, 0.6);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    overflow: hidden;
-}
-
-.custom-table-responsive {
-    margin-top: 20px;
-    padding: 20px;
-    border-radius: 15px;
-    background-color: rgba(255, 255, 255, 0.05);
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(231, 76, 60, 0.3);
-}
-
-.custom-admin-table {
-    width: 100%;
-    margin-bottom: 0;
-    border-collapse: separate;
-    border-spacing: 0;
-}
-
-.custom-admin-table th, .custom-admin-table td {
-    text-align: center;
-    vertical-align: middle;
-    padding: 12px 8px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: #f8f9fa;
-}
-
-.custom-admin-table thead.thead-dark th {
-    background-color: #495057 !important;
-    color: #f8f9fa !important;
-    font-weight: bold;
-    border-bottom: 2px solid #e74c3c !important;
-}
-
-.custom-admin-table thead.thead-dark th:first-child {
-    border-top-left-radius: 10px;
-}
-.custom-admin-table thead.thead-dark th:last-child {
-    border-top-right-radius: 10px;
-}
-
-.custom-admin-table tbody tr:nth-child(even) {
-    background-color: rgba(255, 255, 255, 0.02);
-}
-.custom-admin-table tbody tr:nth-child(odd) {
-    background-color: rgba(255, 255, 255, 0.05);
-}
-
-.custom-admin-table tbody tr:hover {
-    background-color: rgba(231, 76, 60, 0.2) !important;
-    color: #f8f9fa;
-    cursor: pointer;
-}
-
-.btn-action {
-    padding: 6px 12px;
-    font-size: 0.85rem;
-    border-radius: 5px;
-    white-space: nowrap;
-    min-width: 70px;
-}
-
 .no-chamados-message {
     color: #f8f9fa;
     text-align: center;
@@ -403,90 +232,7 @@ body {
     border: 1px dashed rgba(231, 76, 60, 0.5);
 }
 
-/* --- ESTILOS PARA OS LINKS DE RESUMO NA HOME --- */
-.summary-link {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 15px;
-    padding: 15px;
-    border-radius: 10px;
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.summary-link img {
-    margin-bottom: 10px;
-    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
-}
-
-.summary-link p {
-    margin-bottom: 0;
-    font-size: 1.1rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-}
-
-.summary-abertos {
-    color: #dc3545 !important;
-}
-.summary-abertos:hover {
-    color: #bd2130 !important;
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-.summary-andamento {
-    color: #ffc107 !important;
-}
-.summary-andamento:hover {
-    color: #e0a800 !important;
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-.summary-finalizados {
-    color: #28a745 !important;
-}
-.summary-finalizados:hover {
-    color: #1e7e34 !important;
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-/* --- ESTILOS ESPECÍFICOS PARA AS PÁGINAS DE STATUS (Abertos, Andamento, Finalizados) --- */
-
-.status-header {
-    font-weight: bold;
-    text-align: center;
-    color: #f8f9fa !important;
-    padding: 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
-}
-
-.status-aberto-bg {
-    background-color: #e74c3c !important; /* Vermelho vibrante para "Status Aberto" */
-}
-
-.status-andamento-bg {
-    background-color: #f39c12 !important; /* Laranja vibrante para "Em Andamento" */
-}
-
-.status-finalizado-bg {
-    background-color: #2ecc71 !important; /* Verde esmeralda para "Finalizado" */
-}
-
-.total-chamados-header {
-    text-align: left !important;
-    font-weight: bold;
-    color: #f8f9fa !important;
-    background-color: rgba(255, 255, 255, 0.1) !important;
-    padding-left: 15px;
-}
-
-/* Media queries para responsividade */
+/* Media queries para responsividade global */
 @media (max-width: 768px) {
     .card-login,
     .card-abrir-chamado,
@@ -554,24 +300,6 @@ body {
         padding: 4px 8px;
         font-size: 0.75rem;
         min-width: unset;
-    }
-    /* Ajustes para links de resumo em telas menores */
-    .summary-link {
-        margin: 10px 5px;
-        padding: 10px;
-        font-size: 0.9rem;
-    }
-    .summary-link img {
-        width: 50px;
-        height: 50px;
-    }
-    .summary-link p {
-        font-size: 0.9rem;
-    }
-    /* Ajustes para tabela de status em telas menores */
-    .status-header, .total-chamados-header {
-        font-size: 0.9rem;
-        padding: 8px;
     }
 }
 
