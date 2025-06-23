@@ -1,0 +1,631 @@
+@import url('https://fonts.googleapis.com/css2?family=42dot+Sans:wght@300..800&family=Caveat:wght@400..700&family=Noto+Serif+Hentaigana:wght@200..900&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url(src/Icon/minya-dharmas-studio/Minya\ Outline\ DEMO.otf);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Sora", sans-serif;
+}
+
+body{
+    background-size: cover;
+    background-image: url(src/image/tela\ home\ black\ lalis.png);
+}
+
+.Logo{
+
+    background-size: 10px;
+    display: flex;
+    justify-content: flex-start;
+    max-width: 10%;
+}
+
+
+
+.div-header{
+ display: flex;
+ flex-direction: row;
+}
+
+header {
+
+    text-align: center;
+    font-family: 'Caveat';
+    font-size: 24px;
+}
+
+h1 {
+    font-family: 'Caveat';
+}
+
+.menu {
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+
+
+.txt-link{
+
+    margin-top: 70%;
+    display: inline-flex;
+    color: aliceblue;
+}
+
+
+.menu a:hover {
+    color: #0066cc;
+    text-decoration: underline;
+}
+
+
+.item-menu {
+    position: relative; /* Necessário para o posicionamento do tooltip */
+    font-size: 16px;
+    margin-left: 7%;
+
+}
+
+.item-menu a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+/* Estilo do tooltip */
+.item-menu::after {
+    content: attr(data-tooltip); /* O conteúdo do tooltip */
+    position: absolute;
+    left: 50%;
+    bottom: -40px; /* Ajuste para não sobrepor o texto */
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Quando o mouse passa por cima, o tooltip aparece */
+.item-menu:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-5px);
+}
+
+
+
+.sec-botao {
+    padding: 1rem 2rem;
+    margin: 0 auto;
+    margin-left: 21.8%;
+    margin-top: 1.3%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    max-width: 100%;
+
+}
+
+.botao {
+    height:45%;
+    margin: 0.5rem;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+    padding: 1.1rem 2rem;
+    border-radius: 12px;
+    border: 2px solid #E8673F;
+    color: #E8673F;
+
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.botao:hover {
+    background-color: #db611a;
+    color: #ffffff;
+}
+
+
+
+.frase{
+    margin-top: 15.9%;
+    position: absolute;
+    font-size: 132px;
+    forced-color-adjust: none;
+    max-width: 100%;
+    text-align: center;
+      background-image: linear-gradient(#DDD5C700, #DDD5C780, #DDD5C780,#DDD5C780);
+
+}
+
+.destaques{
+    display: flex;
+    flex-direction: column;
+    
+    text-align: center;
+
+}
+
+/* Importação das fontes */
+body {
+    font-family: 'Roboto', sans-serif; /* Fonte principal */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #F8F5F1; /* Cor de fundo geral */
+    color: #333; /* Cor de texto padrão */
+}
+
+/* Estilos do Header */
+.main-header {
+    background-color: #261914; /* Cor de fundo do cabeçalho conforme a imagem */
+    padding: 15px 50px; /* Mais padding para corresponder ao layout */
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo dentro do header */
+    width: 100%; /* Garante que o header ocupe toda a largura */
+    box-sizing: border-box;
+}
+
+.div-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Limita a largura do conteúdo do header */
+}
+
+.Logo {
+    height: 50px; /* Ajuste o tamanho do logo conforme necessário */
+    max-width: 100%;
+}
+
+.main-nav .item-menu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px; /* Espaço entre os itens do menu */
+}
+
+.main-nav .txt-link {
+    text-decoration: none;
+    color: #F8F5F1; /* Cor do texto dos links do menu */
+    font-size: 1.1em;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.main-nav .txt-link:hover {
+    color: #D4AF37; /* Cor dourada/amarela no hover */
+}
+
+.sec-botao {
+    display: flex;
+    gap: 15px; /* Espaço entre os botões */
+}
+
+.botao-header {
+    padding: 10px 20px;
+    border: 1px solid #F8F5F1; /* Borda branca */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.botao-header a {
+    text-decoration: none;
+    color: #F8F5F1; /* Cor do texto do botão */
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.botao-header:hover {
+    background-color: #F8F5F1; /* Fundo branco no hover */
+}
+
+.botao-header:hover a {
+    color: #261914; /* Texto preto no hover */
+}
+
+.primary-button-header {
+    background-color: #D4AF37; /* Cor dourada/amarela para o botão principal */
+    border-color: #D4AF37;
+}
+
+.primary-button-header a {
+    color: #261914; /* Texto escuro para o botão principal */
+}
+
+.primary-button-header:hover {
+    background-color: #ac8e2e; /* Tom ligeiramente mais escuro no hover */
+    border-color: #ac8e2e;
+}
+
+/* Estilos da Seção Hero */
+.hero-section {
+    /* Mude o caminho da imagem abaixo para a sua nova imagem de grupo */
+    background-image: url('src/image/banner_group.jpg'); /* <-- ATENÇÃO AQUI */
+    background-size: cover;
+    background-position: center center; /* Ajuste para centralizar o grupo de pessoas */
+    height: 700px; /* Altura da seção hero */
+    display: flex;
+    justify-content: flex-end; /* Alinha o conteúdo à direita */
+    align-items: center;
+    padding: 0 50px;
+    color: #F8F5F1; /* Cor do texto branco/off-white */
+    position: relative; /* Para posicionamento de elementos filhos */
+}
+
+/* O resto do CSS da .hero-section e de outras seções permanece o mesmo */
+.hero-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%; /* Ajuste a largura da sobreposição */
+    height: 100%;
+    /* Mantive o gradiente para dar contraste ao texto. Se a imagem já for escura o suficiente no lado direito,
+       você pode ajustar este gradiente ou até removê-lo se o texto ficar legível. */
+    background: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 20%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,0.9) 100%);
+    z-index: 0; /* Garante que a sobreposição fique atrás do conteúdo */
+}
+
+/* O restante dos estilos da seção hero e de outras partes do site permanecem inalterados. */
+/* ... (todo o seu código CSS restante) ... */
+
+.hero-content {
+    max-width: 550px; /* Largura do bloco de texto */
+    text-align: right; /* Alinha o texto à direita */
+    padding: 40px;
+    z-index: 1; /* Garante que o conteúdo fique acima da sobreposição */
+    position: relative; /* Necessário para z-index funcionar */
+}
+
+.hero-title {
+    font-family: 'Playfair Display', serif; /* Fonte para o título principal */
+    font-size: 4.5em; /* Tamanho grande para o título */
+    margin-bottom: 10px;
+    line-height: 1.1;
+    color: #F8F5F1; /* Cor do título */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Sombra para destaque */
+}
+
+.hero-title span {
+    font-size: 0.6em; /* Tamanho menor para "TRANÇAS" */
+    display: block; /* Para que "TRANÇAS" vá para a linha de baixo */
+    letter-spacing: 5px; /* Espaçamento entre letras */
+    margin-top: -10px; /* Puxa para cima para ficar mais próximo */
+    font-family: 'Roboto', sans-serif; /* Usa Roboto para "TRANÇAS" */
+    font-weight: 300;
+}
+
+.hero-quote {
+    font-family: 'Sora', sans-serif;
+    font-size: 1.4em;
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #F8F5F1;
+}
+
+.hero-text {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #E0E0E0; /* Cor um pouco mais clara para o texto */
+}
+
+.hero-button {
+    display: inline-block;
+    background-color: #D4AF37; /* Cor dourada/amarela */
+    color: #261914; /* Texto escuro */
+    padding: 15px 35px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: #ac8e2e; /* Tom ligeiramente mais escuro no hover */
+}
+
+/* Seção Bruna Lelis */
+.bruna-lelis-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    background-color: #F8F5F1; /* Cor de fundo clara */
+    gap: 20px; /* Espaçamento entre a linha e o texto */
+}
+
+.bruna-lelis-section p {
+    font-family: 'Sora', sans-serif;
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+    white-space: nowrap; /* Impede que o texto quebre a linha */
+}
+
+.bruna-lelis-section .line {
+    flex-grow: 1; /* Permite que a linha ocupe o espaço restante */
+    height: 1px;
+    background-color: #ccc; /* Cor da linha */
+    max-width: 250px; /* Limite máximo para a largura da linha */
+}
+
+/* Estilos da Nova Seção (content-showcase-section) */
+.content-showcase-section {
+    background-color: #F8F5F1; /* Cor de fundo clara, igual ao body */
+    padding: 50px 0; /* Padding superior e inferior */
+    display: flex;
+    flex-direction: column; /* Conteúdo principal em cima, boxes em baixo */
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+.content-showcase-container {
+    display: flex;
+    gap: 40px; /* Espaço entre as colunas */
+    max-width: 1200px; /* Largura máxima do conteúdo */
+    width: 100%;
+    padding: 0 50px; /* Padding nas laterais */
+    box-sizing: border-box;
+    margin-bottom: 40px; /* Espaço entre as seções de boxes */
+    flex-wrap: wrap; /* Permite que as colunas quebrem a linha em telas pequenas */
+    justify-content: center; /* Centraliza as colunas em telas pequenas */
+}
+
+.left-column img {
+    width: 350px; /* Largura da imagem */
+    height: 450px; /* Altura da imagem */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+    border-radius: 10px; /* Borda arredondada */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaço entre a caixa de citação e os pequenos boxes */
+    flex-grow: 1; /* Permite que a coluna direita cresça */
+    max-width: 600px; /* Limite de largura para a coluna direita */
+}
+
+.quote-box {
+    background-color: #5D3728; /* Cor marrom escura conforme a imagem */
+    padding: 40px 30px;
+    border-radius: 10px;
+    color: #F8F5F1; /* Cor do texto branco/off-white */
+    position: relative; /* Para posicionar o label */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-height: 200px; /* Altura mínima para a caixa de citação */
+    display: flex; /* Para centralizar o texto verticalmente se ele for curto */
+    align-items: center; /* Centraliza o texto verticalmente */
+    text-align: center; /* Centraliza o texto horizontalmente */
+}
+
+.label-cesar {
+    background-color: #4CAF50; /* Verde vibrante */
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    position: absolute;
+    top: -15px; /* Puxa para fora da caixa */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+    white-space: nowrap; /* Evita que o texto quebre */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.quote-box p {
+    font-family: 'Sora', sans-serif;
+    font-size: 1.4em;
+    font-style: italic;
+    line-height: 1.5;
+    margin: 0; /* Remove margem padrão do parágrafo */
+}
+
+.small-boxes-row {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between; /* Espaça os boxes uniformemente */
+    flex-wrap: wrap; /* Permite que os boxes quebrem a linha */
+}
+
+.small-box {
+    background-color: #5D3728; /* Cor marrom escura */
+    width: calc(33.33% - 14px); /* 3 boxes por linha com espaçamento */
+    height: 120px; /* Altura dos boxes */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0; /* Impede que os boxes encolham muito */
+}
+
+.bottom-boxes-row {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px; /* Largura máxima, igual ao container principal */
+    width: 100%;
+    padding: 0 50px;
+    box-sizing: border-box;
+    justify-content: center; /* Centraliza os boxes */
+    flex-wrap: wrap; /* Permite que os boxes quebrem a linha */
+}
+
+.bottom-box {
+    background: linear-gradient(to bottom, #5D3728, #3A2218); /* Gradiente para os boxes de baixo */
+    width: calc(25% - 15px); /* 4 boxes por linha com espaçamento */
+    height: 180px; /* Altura dos boxes */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+/* Responsividade Básica */
+@media (max-width: 992px) {
+    .main-header {
+        padding: 15px 20px;
+    }
+    .div-header-content {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    .main-nav .item-menu-list {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        gap: 15px;
+    }
+    .sec-botao {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-section {
+        background-position: center center;
+        justify-content: center;
+        padding: 50px 20px;
+        height: auto;
+    }
+
+    .hero-section::after {
+        width: 100%;
+        background: rgba(0,0,0,0.7);
+    }
+
+    .hero-content {
+        max-width: 90%;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .hero-title {
+        font-size: 3.5em;
+    }
+
+    .hero-quote {
+        font-size: 1.2em;
+    }
+
+    .hero-text {
+        font-size: 1em;
+    }
+
+    /* Nova Seção Responsiva */
+    .content-showcase-container {
+        flex-direction: column; /* Colunas empilhadas em telas menores */
+        align-items: center; /* Centraliza o conteúdo */
+        padding: 0 20px;
+    }
+    .left-column img {
+        width: 100%; /* Imagem ocupa largura total */
+        max-width: 350px; /* Limite de largura para não esticar demais */
+        height: auto; /* Altura automática */
+    }
+    .right-column {
+        width: 100%;
+        max-width: 500px; /* Limite de largura para o bloco de texto */
+    }
+    .small-box {
+        width: calc(50% - 10px); /* 2 boxes por linha */
+    }
+    .bottom-box {
+        width: calc(50% - 10px); /* 2 boxes por linha */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3em;
+    }
+    .hero-title span {
+        font-size: 0.5em;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 2.5em;
+    }
+    .hero-quote {
+        font-size: 1em;
+    }
+    .bruna-lelis-section p {
+        font-size: 1.5em;
+    }
+    .bruna-lelis-section .line {
+        max-width: 100px;
+    }
+    .small-box, .bottom-box {
+        width: 100%; /* 1 box por linha em telas muito pequenas */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 575.56px) {
+    
+}
+
+
+@media (max-width: 575.56px) {
+    
+
+}
+
+
+
+
+/*Ajuste para os itens do menu ficarem ajustados bem em telas menores como de celulares*/
+@media (max-width: 575.56px) {
+
+
+}
+
+
+
+/* Ajuste para telas maiores (768px ou mais) */
+@media (min-width: 768px) {
+   
+}
+
+
+/* Ajuste para telas maiores (768px ou mais) */
+@media (min-width: 768px) {
+
+}
+
+
