@@ -1,0 +1,131 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Chaves RPG: O Resgate do Barril!</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="estilos/style.css">
+
+    <style>
+        body {
+            background-image: url('sources/vila_chaves_bg.jpg'); /* Adicione uma imagem de fundo da vila */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .card-login {
+            padding: 30px 0 0 0;
+            width: 450px; /* Aumentado para melhor visualização */
+            margin: 0 auto;
+            border-radius: 15px; /* Bordas arredondadas */
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); /* Sombra para destaque */
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.85) !important; /* Fundo mais claro e semi-transparente */
+            backdrop-filter: blur(10px) !important; /* Blur suave */
+            opacity: 100% !important; /* Opacidade total para o card */
+            border: none;
+        }
+
+        .card-header {
+            background-color: #071222;
+            color: white;
+            font-size: 1.3rem;
+            text-align: center;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+        .form-group img {
+            display: block;
+            margin: 0 auto 15px auto;
+            width: 150px; /* Tamanho do logo ajustado */
+            border-radius: 50%; /* Imagem redonda */
+            border: 3px solid #071222; /* Borda para o logo */
+        }
+
+        .form-control {
+            border-radius: 8px;
+        }
+
+        .btn-info {
+            background-color: #071222 !important;
+            border-color: #071222 !important;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-info:hover {
+            background-color: #2a3a50 !important; /* Cor mais clara no hover */
+            border-color: #2a3a50 !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-dark" style="background-color:#071222; margin-bottom: 30px;">
+        <a class="navbar-brand" href="#">
+            <img src="sources/chaves_logo.png" style="border-radius: 50%; margin-right: 10px;" width="40" height="40"
+                class="d-inline-block align-top" alt="">
+            Chaves RPG: O Resgate do Barril!
+        </a>
+    </nav>
+
+    <div style="display:flex; height:80%; flex-flow:row; justify-content:center; align-items:center;">
+        <div class="container">
+            <div class="row">
+                <div class="card-login" style="margin-top: -15px;">
+                    <div class="card">
+                        <div class="card-header">
+                            Crie seu Personagem na Vila
+                        </div>
+                        <div class="card-body">
+                            <form action="personagens.php" method="GET">
+
+
+                                <div class="form-group">
+                                    <img src="sources/kiko_icon.png" alt="Ícone de usuário">
+                                    <input name="nome" type="text" class="form-control" placeholder="Seu Nome de Aventureiro" autofocus required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="personagem_chaves" class="sr-only">Escolha seu Personagem da Vila:</label>
+                                    <select name="personagem_chaves" id="personagem_chaves" class="form-control" required>
+                                        <option value="">Escolha seu Personagem da Vila:</option>
+                                        <option value="sr_madruga">Sr. Madruga</option>
+                                        <option value="popis">Popis</option>
+                                        <option value="chaves">Chaves</option>
+                                        <option value="chapolin">Chapolin Colorado</option>
+                                        <option value="sr_barriga">Sr. Barriga</option>
+                                        <option value="dona_florinda">Dona Florinda</option>
+                                        <option value="dona_clotilde">Dona Clotilde (Bruxa do 71)</option>
+                                        <option value="satanas">Gato (Satanás)</option>
+                                        <option value="godinez">Godinez</option>
+                                        <option value="prof_girafales">Professor Girafales</option>
+                                        <option value="nono">Ñoño</option>
+                                        <option value="jaiminho">Jaiminho, o Carteiro</option>
+                                    </select>
+                                </div>
+                                
+                                <button class="btn btn-lg btn-info btn-block" type="submit">Entrar na Vila</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
