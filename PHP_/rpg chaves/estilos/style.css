@@ -1,0 +1,179 @@
+/* estilos/style.css */
+
+/* Cores Temáticas do Chaves */
+:root {
+    --cor-madeira: #8B4513; /* Marrom para madeira/barril */
+    --cor-telhado: #A0522D; /* Marrom mais escuro para telhados */
+    --cor-grama: #4CAF50; /* Verde para vegetação */
+    --cor-ceu: #87CEEB; /* Azul claro para o céu (mantido para outros elementos se houver) */
+    --cor-barril: #B8860B; /* Amarelo-marrom para o barril */
+    --cor-chaves-roupa: #FFD700; /* Amarelo da roupa do Chaves */
+    --cor-chapolin-roupa: #FF0000; /* Vermelho do Chapolin */
+    --cor-texto-escuro: #333333;
+    --cor-texto-claro: #FFFFFF;
+    --cor-destaque: #E6B800; /* Um amarelo para detalhes (como a cor do pastel do Chaves) */
+    --cor-fundo-card-claro: #FFFAEC; /* Um amarelo muito claro, quase creme, para o fundo interno do card */
+}
+
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: var(--cor-texto-escuro);
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--cor-madeira) !important;
+    border-bottom: 3px solid var(--cor-barril);
+}
+
+.navbar-brand {
+    color: var(--cor-texto-claro) !important;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.navbar-brand img {
+    border: 2px solid var(--cor-chaves-roupa) !important;
+}
+
+.navbar-nav .nav-link {
+    color: var(--cor-texto-claro) !important;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--cor-destaque) !important;
+}
+
+/* Card de Login/Personagem */
+.card-login {
+    border-radius: 20px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.6);
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(5px) !important;
+}
+
+.card-header {
+    background-color: var(--cor-telhado) !important;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    color: var(--cor-texto-claro) !important;
+    text-shadow: 1px 1px 2px var(--cor-texto-escuro);
+}
+
+.card-body {
+    padding: 30px;
+    background-color: var(--cor-fundo-card-claro); /* ALTERADO AQUI: Cor de fundo do corpo do card para amarelo/creme */
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: 1px solid var(--cor-madeira); /* Adicionado uma borda sutil para definir o card */
+}
+
+.form-group img {
+    border: 4px solid var(--cor-barril) !important;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.form-control {
+    border: 2px solid var(--cor-madeira);
+    border-radius: 10px;
+}
+
+.form-control:focus {
+    border-color: var(--cor-destaque);
+    box-shadow: 0 0 0 0.2rem rgba(230, 184, 0, 0.25);
+}
+
+/* Botões */
+.btn-info {
+    background-color: var(--cor-madeira) !important;
+    border-color: var(--cor-madeira) !important;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+    color: var(--cor-texto-claro) !important; /* Certifica que o texto do botão é claro */
+}
+
+.btn-info:hover {
+    background-color: var(--cor-telhado) !important;
+    border-color: var(--cor-telhado) !important;
+}
+
+.btn-secondary {
+    background-color: #6c757d !important;
+    border-color: #6c757d !important;
+    font-weight: bold;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+    color: var(--cor-texto-claro) !important; /* Certifica que o texto do botão é claro */
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268 !important;
+    border-color: #5a6268 !important;
+}
+
+
+/* Páginas de Personagem (personagens.php) */
+/* O .card-body já é global, mas podemos ter ajustes específicos se necessário */
+.container-game {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.5);
+}
+
+.character-details img {
+    border: 5px solid var(--cor-chaves-roupa);
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+.character-info-text strong {
+    color: var(--cor-madeira);
+}
+
+.attributes h3, .actions h3 {
+    color: var(--cor-telhado);
+    text-shadow: 0.5px 0.5px 1px rgba(0,0,0,0.3);
+}
+
+.stats-table th {
+    background-color: var(--cor-grama) !important;
+    color: var(--cor-texto-claro);
+}
+
+.stats-table td {
+    background-color: rgba(255, 255, 255, 0.7); /* Mantido um fundo mais claro para as células da tabela */
+}
+
+.actions-grid div {
+    background-color: var(--cor-fundo-card-claro); /* ALTERADO AQUI: Fundo das ações para amarelo/creme */
+    border: 1px solid var(--cor-madeira);
+}
+
+/* Botões de Ação do Jogo */
+.btn-game-action {
+    background-color: var(--cor-grama) !important;
+    border-color: var(--cor-grama) !important;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+    color: var(--cor-texto-claro) !important; /* Certifica que o texto do botão é claro */
+}
+
+.btn-game-action:hover {
+    background-color: #3f9042 !important;
+    border-color: #3f9042 !important;
+}
+
+/* Historia do jogo */
+.game-story {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-left: 5px solid var(--cor-barril);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+}

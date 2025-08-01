@@ -1,14 +1,11 @@
 <?php
-    // Inclui o arquivo que define as classes dos personagens da vila
-    // Certifique-se de que o caminho para 'classes.php' esteja correto.
-    // Se 'classes.php' estiver na mesma pasta que 'personagens.php', o caminho abaixo está certo.
     require 'Classes/classes.php';
 
-    // Recebe o nome do jogador e o personagem escolhido do formulário
+
     $nome_jogador = isset($_GET['nome']) ? htmlspecialchars($_GET['nome']) : 'Aventureiro da Vila';
     $personagem_chaves_selecionado = isset($_GET['personagem_chaves']) ? $_GET['personagem_chaves'] : 'chaves';
 
-    // Mapeamento dos nomes curtos do formulário para os nomes das classes PHP
+
     $personagens_map = [
         'sr_madruga' => 'SrMadruga',
         'popis' => 'Popis',
@@ -24,10 +21,10 @@
         'jaiminho' => 'Jaiminho'
     ];
 
-    // Verifica se a chave existe no mapeamento antes de tentar instanciar
+
     $classe_do_personagem = $personagens_map[$personagem_chaves_selecionado] ?? 'Chaves';
 
-    // Cria uma nova instância da classe do personagem escolhido
+
     $personagem = new $classe_do_personagem();
 ?>
 
@@ -44,7 +41,7 @@
 
     <style>
         body {
-            background-image: url('sources/vila_chaves_bg_interior.jpg'); /* Imagem de fundo para a página do jogo */
+            background-image: url('img/vila_chaves_bg.jpg'); 
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -58,16 +55,16 @@
 
         .card-login {
             padding: 30px 0;
-            width: 550px; /* Largura ajustada para melhor visualização do conteúdo */
+            width: 550px; 
             margin: 0 auto;
             border-radius: 15px;
             box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
         }
 
         .card {
-            background-color: rgba(255, 255, 255, 0.9) !important; /* Fundo semi-transparente para o card */
-            backdrop-filter: blur(8px) !important; /* Blur suave */
-            opacity: 100% !important; /* Opacidade total para o card */
+            background-color: rgba(255, 255, 255, 0.9) !important; 
+            backdrop-filter: blur(8px) !important; 
+            opacity: 100% !important; 
             border: none;
         }
 
@@ -78,14 +75,14 @@
             text-align: center;
             border-top-left-radius: 15px;
             border-top-right-radius: 15px;
-            padding: 20px; /* Aumentar o padding para o cabeçalho */
+            padding: 20px; 
         }
 
         .card-header h3 {
             margin: 0;
             padding: 0;
-            font-size: 2.2rem; /* Tamanho maior para o nome do jogador */
-            width: 100%; /* Ocupa a largura total para o nome */
+            font-size: 2.2rem; 
+            width: 100%; 
             text-align: center;
         }
 
@@ -109,26 +106,26 @@
         }
 
         .character-details img {
-            width: 180px; /* Tamanho da imagem do personagem */
+            width: 180px; 
             height: 180px;
             object-fit: cover;
             border-radius: 50%;
             border: 5px solid #071222;
-            margin-right: 20px; /* Espaço à direita da imagem */
+            margin-right: 20px; 
         }
 
         .character-info-text {
-            flex-grow: 1; /* Permite que o texto ocupe o espaço restante */
-            text-align: left; /* Alinha o texto à esquerda */
-            color: #333; /* Cor do texto */
+            flex-grow: 1; 
+            text-align: left; 
+            color: #333; 
         }
 
         .character-info-text strong {
-            color: #071222; /* Cor mais escura para os labels */
+            color: #071222;
         }
 
         hr {
-            background-color: #071222; /* Cor da linha divisória */
+            background-color: #071222; 
             margin: 25px 0;
         }
 
@@ -152,8 +149,8 @@
 
         .actions-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr; /* Duas colunas para ações e especiais */
-            gap: 20px; /* Espaço entre as colunas */
+            grid-template-columns: 1fr 1fr; 
+            gap: 20px; 
             margin-top: 20px;
         }
 
@@ -170,7 +167,7 @@
 
     <nav class="navbar navbar-dark" style="background-color:#071222; margin-bottom:35px">
         <a class="navbar-brand" href="#">
-            <img src="sources/chaves_logo.png" style="border-radius: 50%; margin-right: 10px;" width="40" height="40"
+            <img src="img/chaves_logo.jpg" style="border-radius: 50%; margin-right: 10px;" width="40" height="40"
                 class="d-inline-block align-top" alt="">
             Chaves RPG: O Resgate do Barril!
         </a>
@@ -192,7 +189,7 @@
                         </div>
                         <div class="card-body">
                             <div class="character-details">
-                                <img src="sources/<?php echo $personagem->img; ?>.png" alt="<?php echo $personagem->nome_completo; ?>">
+                                <img src="img/<?php echo $personagem->img; ?>.jpg" alt="<?php echo $personagem->nome_completo; ?>">
                                 <div class="character-info-text">
                                     <p><strong>Personagem:</strong> <?php echo $personagem->nome_completo; ?></p>
                                     <p><strong>Descrição:</strong> <?php echo $personagem->descricao; ?></p>

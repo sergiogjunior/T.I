@@ -10,7 +10,7 @@
             echo('Tentou resolver na conversa (Dano leve / Sucesso moderado) <br>');
         }
         public function esquivar() {
-            echo('Desviou da bronca ( chance de evitar dano) <br>');
+            echo('Desviou da bronca (chance de evitar dano) <br>');
         }
         public function pedirAjuda() {
             echo('Pediu ajuda para um amigo da vila (Pode invocar um aliado ou efeito positivo) <br>');
@@ -28,15 +28,16 @@
         }
     }
 
-    // Personagens da Vila do Chaves
+    // Personagens da Vila do Chaves (atributos ajustados para máximo 100)
+
     class SrMadruga extends PersonagemVila {
         public $forca = 60; 
         public $defesa = 40; 
-        public $agilidade = 70; // Para escapar de cobranças
-        public $inteligencia = 80; // Sabedoria popular e malandragem
+        public $agilidade = 70; 
+        public $inteligencia = 80; 
         public $vida = 70;
         public $nome_curto = 'sr_madruga';
-        public $nome_completo = 'Seu Madruga';
+        public $nome_completo = 'Sr. Madruga';
         public $img = 'sr_madruga';
         public $descricao = 'O icônico morador do 71, sempre fugindo do Sr. Barriga e das broncas da Dona Florinda. Mestre em arrumar bicos e em filosofar.';
 
@@ -50,7 +51,7 @@
         public $forca = 30; 
         public $defesa = 50; 
         public $agilidade = 60;
-        public $inteligencia = 75; // Para tirar proveito das situações
+        public $inteligencia = 75; 
         public $vida = 65;
         public $nome_curto = 'popis';
         public $nome_completo = 'Popis';
@@ -66,8 +67,8 @@
     class Chaves extends PersonagemVila {
         public $forca = 40; 
         public $defesa = 30; 
-        public $agilidade = 85; // Pra correr e se esconder no barril
-        public $inteligencia = 60; // Para ideias mirabolantes
+        public $agilidade = 85; 
+        public $inteligencia = 60; 
         public $vida = 50;
         public $nome_curto = 'chaves';
         public $nome_completo = 'Chaves';
@@ -81,28 +82,28 @@
     }
 
     class Chapolin extends PersonagemVila {
-        public $forca = 80; 
-        public $defesa = 70; 
-        public $agilidade = 90;
-        public $inteligencia = 90; // Para suas frases icônicas e soluções inusitadas
-        public $vida = 100;
+        public $forca = 100; // Ajustado de 150 para 100
+        public $defesa = 100; // Ajustado de 120 para 100
+        public $agilidade = 100; // Ajustado de 130 para 100
+        public $inteligencia = 100; // Ajustado de 110 para 100
+        public $vida = 100; // Ajustado de 200 para 100
         public $nome_curto = 'chapolin';
         public $nome_completo = 'Chapolin Colorado';
         public $img = 'chapolin';
-        public $descricao = 'O herói mais atrapalhado, mas com bom coração! Não contava com a sua astúcia para resolver os problemas da vila.';
+        public $descricao = 'O herói mais atrapalhado, mas com bom coração! Não contava com a sua astúcia para resolver os problemas da vila. Agora, nivelado ao poder máximo!';
 
         public function acaoEspecial() {
-            echo 'Marreta Biônica (dano alto, mas pode acertar o alvo errado) <br>';
-            echo 'Pastilhas Encolhedoras (permite entrar em lugares pequenos, ou fugir mais fácil) <br>';
+            echo 'Marreta Biônica (dano massivo, chance de nocaute) <br>';
+            echo 'Pastilhas Encolhedoras (permite entrar em lugares pequenos, ou fugir mais fácil, com bônus de agilidade) <br>';
         }
     }
 
     class SrBarriga extends PersonagemVila {
         public $forca = 50; 
-        public $defesa = 90; // Sua "fortaleza"
+        public $defesa = 90; 
         public $agilidade = 20;
-        public $inteligencia = 85; // Visão de negócios
-        public $vida = 120;
+        public $inteligencia = 85; 
+        public $vida = 100; // Ajustado de 120 para 100
         public $nome_curto = 'sr_barriga';
         public $nome_completo = 'Sr. Barriga';
         public $img = 'sr_barriga';
@@ -115,7 +116,7 @@
     }
 
     class DonaFlorinda extends PersonagemVila {
-        public $forca = 70; // Tapas no Seu Madruga
+        public $forca = 70; 
         public $defesa = 60; 
         public $agilidade = 50;
         public $inteligencia = 70;
@@ -135,7 +136,7 @@
         public $forca = 35; 
         public $defesa = 45; 
         public $agilidade = 55;
-        public $inteligencia = 95; // Para suas "poções" e feitiços
+        public $inteligencia = 95; 
         public $vida = 70;
         public $nome_curto = 'dona_clotilde';
         public $nome_completo = 'Dona Clotilde (Bruxa do 71)';
@@ -149,19 +150,19 @@
     }
     
     class Satanas extends PersonagemVila {
-        public $forca = 50; 
-        public $defesa = 30; 
-        public $agilidade = 95;
-        public $inteligencia = 50; // Instinto animal
-        public $vida = 60;
+        public $forca = 100; // Ajustado de 130 para 100
+        public $defesa = 100; // Ajustado de 100 (já estava no limite)
+        public $agilidade = 100; // Ajustado de 150 para 100
+        public $inteligencia = 90; 
+        public $vida = 100; // Ajustado de 180 para 100
         public $nome_curto = 'satanas';
         public $nome_completo = 'Gato (Satanás)';
         public $img = 'satanas';
-        public $descricao = 'O misterioso gato preto da Dona Clotilde, que as crianças da vila juram ser o Satanás.';
+        public $descricao = 'O misterioso gato preto da Dona Clotilde, que as crianças da vila juram ser o Satanás. Agora, uma força mística e ágil, nivelado ao poder máximo!';
 
         public function acaoEspecial() {
-            echo 'Arranhão Felino (dano leve, chance de sangramento) <br>';
-            echo 'Miado Assustador (reduz a defesa do inimigo) <br>';
+            echo 'Arranhão Místico (dano alto, com chance de causar medo) <br>';
+            echo 'Miado Demoníaco (reduz drasticamente a defesa e moral do inimigo) <br>';
         }
     }
 
@@ -169,7 +170,7 @@
         public $forca = 25; 
         public $defesa = 30; 
         public $agilidade = 40;
-        public $inteligencia = 10; // "Não sei"
+        public $inteligencia = 10; 
         public $vida = 45;
         public $nome_curto = 'godinez';
         public $nome_completo = 'Godinez';
@@ -186,7 +187,7 @@
         public $forca = 40; 
         public $defesa = 50; 
         public $agilidade = 30;
-        public $inteligencia = 100; // Sua sabedoria
+        public $inteligencia = 100; 
         public $vida = 85;
         public $nome_curto = 'prof_girafales';
         public $nome_completo = 'Professor Girafales';
@@ -204,7 +205,7 @@
         public $defesa = 80; 
         public $agilidade = 25;
         public $inteligencia = 60;
-        public $vida = 110;
+        public $vida = 100; // Ajustado de 110 para 100
         public $nome_curto = 'nono';
         public $nome_completo = 'Ñoño';
         public $img = 'nono';
@@ -219,8 +220,8 @@
     class Jaiminho extends PersonagemVila {
         public $forca = 30; 
         public $defesa = 35; 
-        public $agilidade = 15; // Evita a fadiga!
-        public $inteligencia = 70; // Para memorizar os caminhos
+        public $agilidade = 15; 
+        public $inteligencia = 70;
         public $vida = 60;
         public $nome_curto = 'jaiminho';
         public $nome_completo = 'Jaiminho, o Carteiro';
