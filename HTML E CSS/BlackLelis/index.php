@@ -26,7 +26,7 @@
             
             <div class="header-buttons">
                 <a href="#" class="btn-header">Sobre nós</a>
-                <a href="#" class="btn-header">Entrar</a>
+                <a href="login.php" class="btn-header">Entrar</a>
             </div>
         </div>
     </header>
@@ -36,28 +36,52 @@
 
             <div class="info-panel">
                 <h1>Já é de casa?</h1>
-                <a href="#" class="btn-secondary-action">FAZER LOGIN</a>
+                <a href="login.php" class="btn-secondary-action">FAZER LOGIN</a>
             </div>
 
             <div class="form-panel">
                 <div class="form-header">
                     <h2>Cadastrar-se</h2>
                 </div>
-                <form class="main-form">
+
+                <?php
+                    if (isset($_GET['erro'])) {
+                        $mensagem_erro = '';
+                        switch ($_GET['erro']) {
+                            case 'campos_vazios':
+                                $mensagem_erro = 'Por favor, preencha todos os campos.';
+                                break;
+                            case 'email_existente':
+                                $mensagem_erro = 'Este e-mail já está cadastrado. Tente fazer login.';
+                                break;
+                            default:
+                                $mensagem_erro = 'Ocorreu um erro inesperado. Tente novamente.';
+                                break;
+                        }
+                        echo '<div class="alert alert-danger">' . htmlspecialchars($mensagem_erro) . '</div>';
+                    }
+                ?>
+                
+                <form action="processa_cadastro.php" method="POST" class="main-form">
                     <div class="input-group">
                         <i class="bi bi-person"></i>
-                        <input type="text" placeholder="Nome" required>
+                        <input name="nome" type="text" placeholder="Nome Completo" required>
                     </div>
                     <div class="input-group">
                         <i class="bi bi-envelope"></i>
-                        <input type="email" placeholder="Email" required>
+                        <input name="email" type="email" placeholder="E-mail" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="bi bi-telephone"></i>
+                        <input name="telefone" type="tel" placeholder="Telefone / WhatsApp" required>
                     </div>
                     <div class="input-group">
                         <i class="bi bi-lock"></i>
-                        <input type="password" placeholder="Senha" required>
+                        <input name="senha" type="password" placeholder="Senha" required>
                     </div>
-                    <button type="submit" class="btn-primary-action">ENTRAR</button>
+                    <button type="submit" class="btn-primary-action">CADASTRAR</button>
                 </form>
+
                 <div class="separator">
                     <span>ou</span>
                 </div>
