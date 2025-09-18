@@ -1,0 +1,138 @@
+/* Estilos Gerais da Página de Contato */
+.contato-main {
+    background-color: #1a1a1a; /* Fundo escuro consistente */
+    color: #f0f0f0;
+    padding: 60px 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.contato-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contato-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contato-header h1 {
+    font-family: 'Sora', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.contato-header p {
+    font-size: 1.1rem;
+    color: #a0a0a0;
+}
+
+.contato-wrapper {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+/* Coluna de Informações */
+.contato-info {
+    flex-basis: 40%;
+}
+
+.contato-info h3 {
+    font-family: 'Sora', sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+    border-left: 3px solid #D4AF37; /* Detalhe dourado */
+    padding-left: 10px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.info-item i {
+    font-size: 1.8rem;
+    color: #D4AF37; /* Ícones dourados */
+}
+
+.info-item p {
+    margin: 0;
+    line-height: 1.6;
+    color: #c0c0c0;
+}
+
+/* Coluna do Formulário */
+.contato-form {
+    flex-basis: 60%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #ccc;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #252525;
+    border: 1px solid #444;
+    border-radius: 5px;
+    color: #f0f0f0;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #D4AF37;
+}
+
+.btn-enviar {
+    background-color: #D4AF37;
+    color: #121212;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-enviar:hover {
+    background-color: #c49d2b;
+}
+
+/* Seção do Mapa */
+.mapa-container {
+    text-align: center;
+}
+
+.mapa-container h3 {
+    font-family: 'Sora', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.mapa-container iframe {
+    border-radius: 8px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .contato-wrapper {
+        flex-direction: column;
+    }
+}

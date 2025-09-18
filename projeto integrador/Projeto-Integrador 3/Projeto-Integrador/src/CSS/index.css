@@ -1,0 +1,467 @@
+/* ============================================= */
+/* CSS COMPLETO - O PODER DAS TRANÇAS            */
+/* TEMA: BEGE, MARROM E LARANJA/VERMELHO         */
+/* ============================================= */
+
+/* --- CONFIGURAÇÕES GLOBAIS --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sora', 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #DDD5C7; /* Cor de fundo principal (Bege) */
+    color: #683021; /* Cor de texto principal (Marrom Escuro) */
+}
+
+main {
+    padding: 0; /* O padding será por seção */
+}
+
+/* ======================================================= */
+/* --- SEÇÃO HERO (CABEÇALHO COM IMAGEM DE FUNDO) --- */
+/* ======================================================= */
+header.main-header {
+    border: 5px solid red !important;
+}
+
+
+.hero-section {
+    /* Define a imagem de fundo e um filtro escuro para legibilidade */
+    background-image: url(../image/tela-home-black-lalis.png);
+    height: 90vh; /* Altura da seção, 90% da altura da tela */
+    background-size: cover; /* Cobre todo o espaço sem distorcer */
+    background-position: center top; /* Alinha a imagem no centro e no topo */
+    /* Flexbox para posicionar a navegação no topo e o título embaixo */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #fff; /* Cor do texto padrão para branco */
+}
+
+/* --- Barra de Navegação (Dentro da Seção Hero) --- */
+.hero-section header {
+    background-color: transparent;
+    box-shadow: none;
+    padding: 20px 5%;
+    position: absolute; /* Posição absoluta para flutuar */
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.hero-section .div-header {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.Logo {
+    height: 150px;
+}
+
+/* Links do menu */
+.hero-section nav .menu-principal {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.hero-section .item-menu a {
+    color: #ffffff;
+    font-weight: 500;
+    text-decoration: none;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    transition: color 0.3s;
+}
+
+.hero-section .item-menu a:hover {
+    color: #E8673F;
+}
+
+/* Botões do menu */
+.hero-section .sec-botao {
+    display: flex;
+    gap: 15px;
+}
+
+.hero-section .botao {
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.hero-section .botao:hover {
+    background-color: #fff;
+    color: #683021;
+    text-shadow: none;
+}
+
+.hero-section .botao-destaque {
+    background-color: #E8673F;
+    border-color: #E8673F;
+    color: #fff;
+}
+
+.hero-section .botao-destaque:hover {
+    background-color: #d1522a;
+    border-color: #d1522a;
+    color: #fff;
+}
+
+/* --- Título Principal (Dentro da Seção Hero) --- */
+.hero-title {
+
+    padding: 0 75% 50px 0%; /* Distância da parte de baixo */
+    position: absolute;
+    margin-top: 43%;
+    width: 180%;
+ 
+}
+
+.hero-title h2 {
+    white-space: nowrap;
+    text-align: center;
+    font-size: 76.5px;
+    max-width: 100%;
+    background-image: linear-gradient(#DDD5C700, #DDD5C780, #DDD5C780,#DDD5C780);
+}
+
+
+/* --- SEÇÃO DE DESTAQUES (SERVIÇOS) --- */
+.destaques {
+    text-align: center;
+    font-family: 'Sora', sans-serif;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    padding: 60px 0 40px 0;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5% 40px 5%;
+}
+
+.item-servico {
+    background-color: #fff;
+    border: 1px solid #d1c8b8;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.item-servico:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.item-servico img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.item-servico h2 {
+    font-size: 1.4rem;
+    padding: 15px 10px 5px;
+}
+
+.item-servico p {
+    color: #91483f;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 5px 10px 15px;
+}
+
+/* --- BOTÃO VER MAIS --- */
+.ver-mais-container {
+    text-align: center;
+    padding-bottom: 60px;
+}
+.button_vermias {
+    display: inline-block;
+    background-color: #91483f;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 12px 30px;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+}
+
+.button_vermias:hover {
+    background-color: #7a3c34;
+}
+
+/* --- CARROSSEL DE PRODUTOS --- */
+.produtos-carrossel {
+    background-color: #683021; /* Fundo Marrom Escuro */
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+.carrossel-titulo-com-linhas {
+    color: #DDD5C7; /* Texto Bege */
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-family: 'Sora', sans-serif;
+    text-transform: uppercase;
+}
+.titulo-decorado-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.titulo-decorado-wrapper img {
+    filter: brightness(0) invert(93%) sepia(9%) saturate(291%) hue-rotate(345deg) brightness(91%) contrast(87%); /* Efeito para deixar o logo bege */
+    height: 40px;
+}
+
+.carrossel-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.carrossel-viewport {
+    overflow: hidden;
+}
+
+.produtos-grid {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+}
+
+.produto-card {
+    background-color: #DDD5C7;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    color: #683021;
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    flex-shrink: 0;
+}
+
+.produto-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.produto-card .produto-info {
+    font-size: 0.9rem;
+    flex-grow: 1;
+    margin-bottom: 10px;
+}
+
+.produto-card .produto-valor {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #91483f;
+}
+
+.carrossel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(221, 213, 199, 0.9);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+    color: #683021;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.carrossel-btn:hover {
+    background-color: #DDD5C7;
+}
+
+#btn-anterior { left: -25px; }
+#btn-proximo { right: -25px; }
+
+
+.produto-botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.produto-botoes a {
+    padding: 10px 5px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-produto {
+    background-color: #91483f;
+    color: #ffffff;
+}
+.btn-produto:hover {
+    background-color: #7a3c34;
+}
+
+.btn-app {
+    background-color: transparent;
+    border: 2px solid #91483f;
+    color: #91483f;
+}
+.btn-app:hover {
+    background-color: #91483f;
+    color: #ffffff;
+}
+
+
+
+
+.servico-botoes {
+    display: flex;
+    gap: 10px;
+    padding: 15px;
+    justify-content: center;
+}
+
+.servico-botoes a {
+    flex: 1;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.btn-servico-agendar {
+    background-color: #91483f;
+    color: white;
+}
+.btn-servico-agendar:hover {
+    background-color: #7a3c34;
+}
+
+.btn-servico-app {
+    background-color: transparent;
+    border: 2px solid #91483f;
+    color: #91483f;
+}
+.btn-servico-app:hover {
+    background-color: #91483f;
+    color: white;
+}
+
+.btn-header-logout {
+    background-color: #e8673f;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+/* ============================================= */
+/* ESTILO PARA TÍTULOS COM TRAÇOS LATERAIS       */
+/* ============================================= */
+
+/* Estilo para o título "Destaques" (continua o mesmo) */
+.destaques h2 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: #683021;
+}
+
+.destaques h2::before,
+.destaques h2::after {
+    content: '';
+    flex-grow: 1;
+    background-color: #c8bfae;
+    height: 2px;
+    margin: 0 20px;
+}
+
+
+/* --- CÓDIGO CORRIGIDO ABAIXO --- */
+
+/* Estilo para o título "Produtos" (agora com logos e traços) */
+.titulo-decorado-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Espaço entre o logo e o conjunto [traço + título] */
+    margin-bottom: 40px;
+}
+
+.carrossel-titulo-com-linhas {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+/* Cria o traço ANTES e DEPOIS do texto "Produtos" */
+.carrossel-titulo-com-linhas::before,
+.carrossel-titulo-com-linhas::after {
+    content: '';
+    width: 500px;
+    height: 2px;
+    background-color: #DDD5C7; /* Cor do traço para o fundo marrom */
+    margin: 0 20px; /* Espaço entre o traço e o texto */
+}
+
+/* A MUDANÇA ESTÁ AQUI: Garantimos que os logos apareçam */
+.titulo-decorado-wrapper .logo-titulo {
+    display: block; /* Garante que a imagem seja exibida */
+    height: 80px;   /* Mantém o tamanho do logo */
+}
+
+
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 992px) {
+    .hero-section header, .hero-section .div-header {
+        position: static;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+@media (max-width: 768px) {
+    #btn-anterior { left: 10px; }
+    #btn-proximo { right: 10px; }
+}

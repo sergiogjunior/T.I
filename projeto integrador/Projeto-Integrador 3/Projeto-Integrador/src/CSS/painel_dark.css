@@ -1,0 +1,268 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --dark-brown: #362923;
+    --medium-brown: #45352d;
+    --light-brown: #665c5c;
+    --text-light: #f0f0f0;
+    --text-secondary: #a3a3a3;
+    --accent-color: #f7a01a;
+    --card-bg: #45352d;
+    --hover-bg: #5a4b41;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--dark-brown);
+    color: var(--text-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.dashboard {
+    display: flex;
+    width: 90%;
+    max-width: 1400px;
+    height: 90vh;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: var(--medium-brown);
+    width: 250px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 2px solid var(--dark-brown);
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+.sidebar nav ul {
+    list-style: none;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar nav ul li a {
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 15px 15px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar nav ul li a:hover,
+.sidebar nav ul li.active a {
+    background-color: var(--dark-brown);
+}
+
+.sidebar nav ul li a ion-icon {
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.logout-button {
+    background-color: var(--medium-brown);
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 12px 20px;
+    text-align: center;
+    border: 1px solid var(--text-light);
+    border-radius: 8px;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: var(--text-light);
+    color: var(--medium-brown);
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    background-color: var(--dark-brown);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.main-header h1 {
+    font-weight: 500;
+}
+
+/* Botão Adicionar (NOVO) */
+.add-button {
+    background-color: var(--accent-color);
+    color: var(--dark-brown);
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.add-button:hover {
+    background-color: #ffb43a;
+}
+
+/* Cards de Resumo */
+.summary-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: 5px;
+}
+
+.card-value {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+/* Tabela Genérica (para agendamentos e serviços) */
+.appointments-table,
+.services-list {
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.appointments-table h2 {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    padding: 15px 10px;
+    border-bottom: 1px solid var(--light-brown);
+}
+
+th {
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.no-appointments, .no-data {
+    color: var(--text-secondary);
+    text-align: center;
+    padding: 20px;
+}
+
+/* Ícones de Ações (NOVO) */
+.actions {
+    text-align: right;
+}
+
+.action-icon {
+    color: var(--text-secondary);
+    font-size: 20px;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+}
+
+.action-icon:hover {
+    color: var(--text-light);
+}
+
+/* === ESTILOS PARA A BARRA DE BUSCA === */
+
+.search-bar {
+    margin-bottom: 30px;
+}
+
+.search-bar form {
+    display: flex;
+    width: 100%;
+    max-width: 500px; /* Aumenta o tamanho máximo da barra */
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--light-brown);
+    border-radius: 6px 0 0 6px;
+    background-color: var(--medium-brown);
+    color: var(--text-light);
+    font-size: 1rem;
+    outline: none;
+}
+
+.search-bar input::placeholder {
+    color: var(--text-secondary);
+}
+
+.search-bar button {
+    padding: 0 15px;
+    border: 1px solid var(--light-brown);
+    border-left: none;
+    background-color: var(--medium-brown);
+    color: var(--text-light);
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: var(--light-brown);
+}
